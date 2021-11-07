@@ -1,1 +1,30 @@
-// TODO Import fonts to project
+@font-face {
+    font-family: 'lora-bold';
+    src: url('../fonts/Lora-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Lora-Bold.ttf') format('truetype'),
+        url('../fonts/Lora-Bold#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'lora-regular';
+    src: url('../fonts/Lora-Regular.eot?#iefix') format('embedded-opentype'),
+        /*        url('../fonts/OpenSans-Regular.woff') format('woff'),*/
+        url('../fonts/Lora-Regular.ttf') format('truetype'),
+        url('../fonts/Lora-Regular#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'montserrat-semibold';
+    src: url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        /*        url('../fonts/OpenSans-Regular.woff') format('woff'),*/
+        url('../fonts/Montserrat-SemiBold.ttf') format('truetype'),
+        url('../fonts/Montserrat-SemiBold#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: 'montserrat-bold';
+    src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        /*        url('../fonts/OpenSans-Regular.woff') format('woff'),*/
+        url('../fonts/Montserrat-Bold.ttf') format('truetype'),
+        url('../fonts/Montserrat-Bold#svgFontName') format('svg');
+}

@@ -1,6 +1,7 @@
-// TODO Added basic styles
+h1,h2,h3,h4,h5{
+    font-family: $font-heading-bold;
+}
 
-h1{
-    font-size: 54px;
-    color: red;
+body{
+    font-family: $font-text-regular;
 }
