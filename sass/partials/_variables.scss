@@ -2,3 +2,17 @@ $font-text-regular: "lora-regular", serif;
 $font-text-bold: "lora-bold", serif;
 $font-heading-semibold: "montserrat-semibold", sans-serif;
 $font-heading-bold: "montserrat-bold", sans-serif;
+
+$colours: (
+   dark-brown:  #8C7762,
+   light-brown: #FFF2E6,
+   main-brown: #D9C2AD,
+   dark-green: #54818C,
+   light-green: #ADD0D9,
+   dark-text: #222326,
+   background-light: #F2F2F0,
+);
+
+@function getColor($color) {
+    @return map-get($colours, $color);
+}
