@@ -29,7 +29,7 @@ body {
 }
 
 .navigation {
-  background-color: #D9C2AD !important;
+  background-color: #d9c2ad8c !important;
 }
 
 .navigation__cart {
@@ -73,6 +73,11 @@ body {
           transform: scale(1.3);
 }
 
+.navigation .navbar-brand {
+  margin-right: 3rem !important;
+}
+
 .navigation .nav-item {
   font-family: "montserrat-semibold", sans-serif;
+  font-size: 1.2rem;
 }
