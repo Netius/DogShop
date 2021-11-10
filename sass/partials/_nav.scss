@@ -1,5 +1,5 @@
 .navigation{
-    background-color:  getColor("main-brown") !important;
+    background-color:  getColor("light-brown") !important;
     &__cart{
         transition: transform .3s;
         position: relative;
@@ -24,9 +24,6 @@
             transform: scale(1.3);
         }
     
-    }
-    a, i{
-        // color: getColor("dark-text") !important; 
     }
 
     .nav-item{
