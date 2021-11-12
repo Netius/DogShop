@@ -1,11 +1,11 @@
 .navigation{
     background-color:  getColor("light-brown") !important;
+    &__logo{
+        width: 175px;
+    }    
+    
     &__cart{
-        transition: transform .3s;
-        position: relative;
-        &:hover{
-            transform: scale(1.3);
-        }
+        position: relative;  
         &--total{
             float: right;
         }
@@ -19,15 +19,19 @@
         }
     }
     &__admin{
-        transition: transform .3s;
-        &:hover{
-            transform: scale(1.3);
-        }
-    
+        font-family: "montserrat-semibold", sans-serif ;
     }
 
     .nav-item{
         font-family: $font-heading-semibold;
+    }
+
+    .zoom{
+        transition: transform .3s;
+        transform-origin: left bottom;
+    }
+    .zoom:hover{
+        transform: scale(1.15);
     }
     
 }

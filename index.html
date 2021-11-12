@@ -1,111 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script
-			src="https://kit.fontawesome.com/c7b2c2ac29.js"
-			crossorigin="anonymous"
-		></script>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>DogShop - Home</title>
-		<meta
-			name="description"
-			content="DogShop - Everything for your best friend."
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- <link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-			crossorigin="anonymous"
-		/> -->
-		<link rel="stylesheet" href="css/styles.css" />
-	</head>
 
-	<body>
-		<!-- <img alt="logo" class="logo logo-light" style="width: 175px;" src="../images/dogshop-logo.svg"> -->
+<head>
+    <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DogShop - Home</title>
+    <meta name="description" content="DogShop - Everything for your best friend." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
 
-		<nav class="navbar navbar-expand-lg navbar-light navigation pt-5 pb-5">
-			<div class="container">
-				<a class="navbar-brand" href="#">
-					<img alt="logo"
-						class="navigation__logo logo-light"
-						style="width: 175px"
-						src="../images/dogshop-logo.svg"/>
-				</a>
-				<button class="navbar-toggler collapsed"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown"
-					aria-controls="navbarNavDropdown"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="navbar-collapse collapse" id="navbarNavDropdown">
-					<ul class="navbar-nav me-auto">
-						<li class="nav-item">
-							<a class="nav-link active" href="#">Wear</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Food</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Play</a>
-						</li>
-					</ul>
-					<div class="d-flex">
-						<form class="d-flex navigation__search">
-							<input class="form-control "
-								type="search"
-								placeholder="Search"
-								aria-label="Search"	/>
-								<i class="fas fa-search navigation__search--icon fa-lg"></i>
-						</form>
-										
-                        <!-- Right elements -->
-						<div class="d-flex align-items-center">			
-							<!-- Notifications -->
-							<a class="text-reset me-3 navigation__cart"
-								href="#"
-								role="button"
-								aria-expanded="false">
-								<i class="fas fa-shopping-cart fa-lg"></i>
-								<span class="badge rounded-pill badge-notifications bg-danger navigation__cart--total">1</span>
-							</a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navigation pt-5 pb-5">
+        <div class="container">
+            <a class="navbar-brand zoom" href="index.html" title="DogShop | Home">
+                <img alt="Dogshop-logo" class="navigation__logo me-4 logo-light" src="../images/dogshop-logo.svg" />
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item zoom">
+                        <a class="nav-link active" title="Shop all Wear clothes to your dog." href="products.html">Wear</a>
+                    </li>
+                    <li class="nav-item zoom">
+                        <a class="nav-link" title="Shop all Food your dog wants." href="products.html">Food</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link zoom" title="Shop all Play toys to your dog." href="products.html">Play</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <form class="d-flex navigation__search">
+                        <input class="form-control " type="search" placeholder="Search" aria-label="Search" />
+                        <i class="fas fa-search navigation__search--icon fa-lg"></i>
+                    </form>
 
-							<!-- Avatar -->
-							<a class=" text-reset dropdown-toggle d-flex align-items-center hidden-arrow navigation__admin"
-								href="#"
-								id="navbarDropdownMenuLink"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false">
-								<i class="fa fa-user fa-lg navigation__admin--icon"></i>
-							</a>
-							<ul class="dropdown-menu dropdown-menu-end"
-								aria-labelledby="navbarDropdownMenuLink">
-								<li>
-									<a class="dropdown-item" href="#">My profile</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="#">Settings</a>
-								</li>
-								<li>
-									<a class="dropdown-item" href="#">Logout</a>
-								</li>
-							</ul>
-						</div>
-						<!-- Right elements -->
-					</div>
-				</div>
-			</div>
-		</nav>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-			crossorigin="anonymous"
-		></script>
-		<script src="index.js" type="module" async defer></script>
-	</body>
+                    <!-- Right elements -->
+                    <div class="d-flex align-items-center">
+                        <a class="text-reset ms-2 navigation__cart zoom" title="See your shopping cart" href="cart.html" role="link">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span
+                                class="badge rounded-pill badge-notifications bg-danger navigation__cart--total">1</span>
+                        </a>
+
+                        <a class="nav-link text-reset navigation__admin zoom" title="Login to admin page" href="login.html" id="navbarDropdownMenuLink"
+                            role="link">
+                            <!-- <i class="fa fa-user fa-lg navigation__admin--icon"></i> -->
+                            Login
+                            <i class="fas fa-sign-in-alt fa-lg"></i>
+                        </a>
+                    </div>
+                    <!-- Right elements -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script src="index.js" type="module" async defer></script>
+</body>
+
 </html>
