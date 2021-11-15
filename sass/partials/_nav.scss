@@ -12,18 +12,23 @@
     }
     &__search{
         position: relative;
-        margin-right: 1em;
+        flex: 1;
+
         &--icon{
            align-self: center;
            margin-left: 5px;
         }
+       
     }
     &__admin{
         font-family: "montserrat-semibold", sans-serif ;
+        letter-spacing: 3px;
+
     }
 
     .nav-item{
         font-family: $font-heading-semibold;
+        letter-spacing: 3px;
     }
 
     .zoom{

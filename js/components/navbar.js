@@ -13,7 +13,7 @@ export default function navbar(){
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav me-auto">
+                <ul class="navbar-nav ">
                     <li class="nav-item zoom">
                         <a class="nav-link active" title="Shop all Wear clothes to your dog." href="products.html">Wear</a>
                     </li>
@@ -24,12 +24,11 @@ export default function navbar(){
                         <a class="nav-link zoom" title="Shop all Play toys to your dog." href="products.html">Play</a>
                     </li>
                 </ul>
+                <form class="d-flex navigation__search me-3 ms-3">
+                    <input class="form-control " type="search" placeholder="Search" aria-label="Search" />
+                    <i class="fas fa-search navigation__search--icon fa-lg"></i>
+                </form>
                 <div class="d-flex">
-                    <form class="d-flex navigation__search">
-                        <input class="form-control " type="search" placeholder="Search" aria-label="Search" />
-                        <i class="fas fa-search navigation__search--icon fa-lg"></i>
-                    </form>
-
                     <!-- Right elements -->
                     <div class="d-flex align-items-center">
                         <a class="text-reset ms-2 navigation__cart zoom" title="See your shopping cart" href="cart.html" role="link">

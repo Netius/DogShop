@@ -7,10 +7,10 @@ export default function hero() {
         <div class="row hero__container--image">
             <div class="text-center">
                     <div class="d-flex justify-content-center align-items-center h-100">
-                        <div class="text-white p-3">
-                        <h1 class="mb-3">Heading</h1>
-                        <h4 class="mb-3">Subheading</h4>
-                        <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a>
+                        <div class="text-white p-5 hero__container--text">
+                        <h1 class="mb-3">Shop all</h1>
+                        <p class="mb-5">Everything your best friend needs</p>
+                        <a class="zoom-button px-5 py-3 btn btn-feature btn-lg" title="DogShop | Shop all" href="products.html" role="button">Shop now</a>
                         </div>
                     </div>
             </div>
@@ -38,5 +38,6 @@ async function fetchHeroImage() {
             return imageContainer.style.backgroundImage= `url('${strapiUrl}${heroImage}')`; 
         
         })
+        // TODO Error handling
 		.catch((error) => console.log("error", error));
 }
