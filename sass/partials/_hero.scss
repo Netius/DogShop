@@ -1,0 +1,12 @@
+.hero__container{
+   
+    &--image{
+        min-height: 600px;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+  &--text{
+    background-color: rgba(0, 0, 0, 0.6)
+  }
+}

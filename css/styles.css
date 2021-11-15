@@ -12036,3 +12036,14 @@ body {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
+
+.hero__container--image {
+  min-height: 600px;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__container--text {
+  background-color: rgba(0, 0, 0, 0.6);
+}
