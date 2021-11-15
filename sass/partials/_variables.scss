@@ -3,8 +3,6 @@ $font-text-bold: "lora-bold", serif;
 $font-heading-semibold: "montserrat-semibold", sans-serif;
 $font-heading-bold: "montserrat-bold", sans-serif;
 
-$primary: #222326 !important;
-
 $colours: (
    dark-brown:  #8C7762,
    light-brown: #D9C2AD8C,
@@ -18,11 +16,11 @@ $colours: (
 @function getColor($color) {
     @return map-get($colours, $color);
 }
-
+// Sett colors on text-dark , primay and so on
+$dark: getColor("dark-text");
+$primary: getColor("dark-text");
 
 .btn-feature {
-    -webkit-box-shadow: 2px 5px 16px 0px #54818C, 5px 5px 15px 24px rgba(106,0,140,0); 
-    box-shadow: 2px 5px 16px 0px #54818C, 5px 5px 15px 24px rgba(106,0,140,0);
     font-size: 1.3rem;
     letter-spacing: 3px;
     font-family: $font-heading-semibold;
