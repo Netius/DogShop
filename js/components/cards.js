@@ -1,29 +1,47 @@
+import { productStrapiUrl, strapiUrl } from "../constants/strapiUrl.js"
+
 export default function cardsProducts (products){
     const cardsContainer = document.getElementById("cards-container");
 
     cardsContainer.innerHTML = "";
 
-    cardsContainer.innerHTML = `
-    <div class="row pb-5 mb-4">
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-            <!-- Card-->
-            <div class="card rounded shadow-sm border-0">
-                <div class="card-body p-4">
-                    <img src="https://bootstrapious.com/i/snippets/sn-cards/shoes-1_gthops.jpg"
-                        alt="" class="img-fluid d-block mx-auto mb-3">
-                    <h3 class="fs-4"><a href="#" class="text-dark">Awesome product</a></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </p>
+    products.forEach(product => {
+        cardsContainer.innerHTML += `
+        <div class="col-lg-4 col-md-6 mb-4">
+                <!-- Card-->
+                <div class="card rounded shadow-sm border-0 h-100">
+                    <div class="card-body p-4">
+                        <img src="${strapiUrl}${product.image.url}"
+                            alt="" class="img-fluid d-block mx-auto mb-3">
+                        <h3 class="fs-4"><a href="#" class="text-dark">${product.title}</a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
                 </div>
-            </div>
         </div>
-    </div>
-    `;
 
+        `;
+    })
+   
     return cardsContainer;
 }
 
-export function fetchProducts (){
+export  async function fetchProducts (){
+    var myHeaders = new Headers();
+	myHeaders.append("Content-Type", "application/json");
 
+	var requestOptions = {
+		method: "GET",
+		headers: myHeaders,
+	};
+
+	await fetch(productStrapiUrl, requestOptions)
+		.then((response) => response.json())
+		.then((result) => { console.log(result)
+        
+            cardsProducts(result);
+        })
+        // TODO Error handling
+		.catch((error) => console.log("error", error));
 
 }
