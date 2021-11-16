@@ -3,7 +3,7 @@ export default function navbar(){
 
     navBarContainer.innerHTML =`
     <nav class="navbar navbar-expand-lg navbar-light navigation pt-5 pb-5">
-        <div class="container">
+        <div class="container-xl">
             <a class="navbar-brand zoom" href="index.html" title="DogShop | Home">
                 <img alt="Dogshop-logo" class="navigation__logo me-4 logo-light" src="../images/dogshop-logo.svg" />
             </a>

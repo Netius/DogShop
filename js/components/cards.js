@@ -5,19 +5,23 @@ export default function cardsProducts (products){
 
     cardsContainer.innerHTML = "";
 
-    products.forEach(product => {
+    products.forEach(product => {        
+        if(!product.featured) return; // Returns if not featured 
+
         cardsContainer.innerHTML += `
         <div class="col-lg-4 col-md-6 mb-4">
-                <!-- Card-->
-                <div class="card rounded shadow-sm border-0 h-100">
-                    <div class="card-body p-4">
+            <a href="products.html?id=${product.id}" title="Shop ${product.title}">    
+                <div class="card rounded shadow-lg border-0 h-100 zoom-button">
+                    <div class="card-body text-center p-0">
                         <img src="${strapiUrl}${product.image.url}"
-                            alt="" class="img-fluid d-block mx-auto mb-3">
-                        <h3 class="fs-4"><a href="#" class="text-dark">${product.title}</a></h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </p>
+                            alt="${product.title}" class="img-fluid d-block mx-auto mb-3">
+                        <h3 class="fs-5 nav-item">
+                            <a href="products.html?id=${product.id}" title="Shop ${product.title}" class="nav-link text-dark">${product.title}</a>
+                        </h3>
+                        <p>$${product.price}</p>
                     </div>
                 </div>
+            </a>    
         </div>
 
         `;
