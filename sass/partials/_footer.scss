@@ -1,0 +1,8 @@
+.footer{
+    background-color: getColor("dark-brown");
+    &__logo path{
+        fill: getColor("background-light");
+        background-color: antiquewhite;
+        
+    }
+}

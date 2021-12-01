@@ -11249,4 +11249,12 @@ body {
   background-color: white;
 }
 
+.footer {
+  background-color: #8C7762;
+}
+.footer__logo path {
+  fill: #F2F2F0;
+  background-color: antiquewhite;
+}
+
 /*# sourceMappingURL=styles.css.map */
