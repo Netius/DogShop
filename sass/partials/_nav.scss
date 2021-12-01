@@ -30,13 +30,11 @@
         font-family: $font-heading-semibold;
         letter-spacing: 3px;
     }
-
-    .zoom{
-        transition: transform .3s;
-        transform-origin: left bottom;
-    }
-    .zoom:hover{
-        transform: scale(1.15);
-    }
-    
+}
+.zoom{
+    transition: transform .3s;
+    transform-origin: left bottom;
+}
+.zoom:hover{
+    transform: scale(1.15);
 }

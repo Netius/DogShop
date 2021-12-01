@@ -11209,11 +11209,13 @@ body {
   font-family: "montserrat-semibold", sans-serif;
   letter-spacing: 3px;
 }
-.navigation .zoom {
+
+.zoom {
   transition: transform 0.3s;
   transform-origin: left bottom;
 }
-.navigation .zoom:hover {
+
+.zoom:hover {
   transform: scale(1.15);
 }
 
