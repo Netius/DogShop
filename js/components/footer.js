@@ -13,7 +13,7 @@ export default function footer(){
                 </a>
             </li>
             <li>
-                <a class="link-light" href="www.upneto.com" title="Upneto.com">
+                <a class="link-light" href="www.upneto.com" title="upneto.com" target="_blank" rel="noreferrer">
                     &copy;2021 | upneto.com
                 </a>
             </li>
