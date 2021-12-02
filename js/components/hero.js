@@ -1,27 +1,10 @@
 import { heroStrapiUrl , strapiUrl } from "../constants/strapiUrl.js"
+import { clearMessage } from "../utils/clearMessage.js";
+import { errorMessage } from "../utils/errorMessage.js";
+import { displayBigSpinner } from "../utils/spinner.js";
 
-export default function hero() {
-	const heroContainer = document.getElementById("hero-container");
-	heroContainer.innerHTML = `
-    <div class="container-fluid hero__container">
-        <div class="row hero__container--image">
-            <div class="text-center">
-                    <div class="d-flex justify-content-center align-items-center h-100">
-                        <div class="text-white p-5 hero__container--text">
-                        <h1 class="mb-3">Shop all</h1>
-                        <p class="mb-5">Everything your best friend needs</p>
-                        <a class="zoom-button px-5 py-3 btn btn-feature btn-lg" title="DogShop | Shop all" href="products.html" role="button">Shop now</a>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </div>
-    `;
-    fetchHeroImage();
-	return heroContainer;
-}
-
-async function fetchHeroImage() {
+export async function fetchHeroImage() {
+    displayBigSpinner("#hero__spinner", "Loading image")
 	var myHeaders = new Headers();
 	myHeaders.append("Content-Type", "application/json");
 
@@ -35,9 +18,14 @@ async function fetchHeroImage() {
 		.then((result) => {
             let heroImage = result.hero_banner.url;
             let imageContainer = document.querySelector(".hero__container--image");
-            return imageContainer.style.backgroundImage= `url('${strapiUrl}${heroImage}')`; 
-        
+            imageContainer.style.backgroundImage= `url('${strapiUrl}${heroImage}')`; 
+            clearMessage("#hero__spinner");
         })
         // TODO Error handling
-		.catch((error) => console.log("error", error));
+		.catch((error) => {
+            console.log("error", error);
+            errorMessage("#hero__spinner", "Ooops! This shouldn't happen, my bad...")
+            return;
+
+        });
 }

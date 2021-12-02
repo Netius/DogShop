@@ -1,4 +1,7 @@
 import { productStrapiUrl, strapiUrl } from "../constants/strapiUrl.js"
+import { clearMessage } from "../utils/clearMessage.js";
+import { errorMessage } from "../utils/errorMessage.js";
+import { displayBigSpinner } from "../utils/spinner.js";
 
 export default function cardsProducts (products){
     const cardsContainer = document.getElementById("cards-container");
@@ -31,6 +34,7 @@ export default function cardsProducts (products){
 }
 
 export  async function fetchProducts (){
+    displayBigSpinner("#cards__spinner", "Loading products")
     var myHeaders = new Headers();
 	myHeaders.append("Content-Type", "application/json");
 
@@ -42,10 +46,13 @@ export  async function fetchProducts (){
 	await fetch(productStrapiUrl, requestOptions)
 		.then((response) => response.json())
 		.then((result) => { console.log(result)
-        
             cardsProducts(result);
+            clearMessage("#cards__spinner");
         })
         // TODO Error handling
-		.catch((error) => console.log("error", error));
+		.catch((error) => {
+            console.log("error", error)
+            errorMessage("#cards__spinner", "Ooops! This shouldn't happen, my bad...")
+        });    
 
 }
