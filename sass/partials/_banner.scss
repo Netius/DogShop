@@ -1,5 +1,7 @@
 .banner{
-    background-color: getColor("main-brown");
+    background-image: url(../images/Sports.png);
+    background-repeat: repeat;
+
     &__textct{
         background-color: white;
     }

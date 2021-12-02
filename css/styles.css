@@ -11245,7 +11245,8 @@ body {
 }
 
 .banner {
-  background-color: #D9C2AD;
+  background-image: url(../images/Sports.png);
+  background-repeat: repeat;
 }
 .banner__textct {
   background-color: white;
