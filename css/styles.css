@@ -11226,7 +11226,6 @@ body {
   background-size: cover;
 }
 .hero__container--text h1, .hero__container--text .h1 {
-  font-size: 4rem;
   text-shadow: 1px 1px 2px black;
 }
 .hero__container--text p {
