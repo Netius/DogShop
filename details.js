@@ -4,6 +4,7 @@ import footer from "./js/components/footer.js";
 import { productStrapiUrl } from "./js/constants/strapiUrl.js";
 import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import getUrlParamsId from "./js/utils/getUrlParamsId.js";
+import productDetails from "./js/components/details/productDetails.js";
 
 
 
@@ -13,7 +14,7 @@ const productId= getUrlParamsId();
 
 fetchStrapi(productStrapiUrl + productId, "#details-container")
     .then(product => {
-        console.log(product);
+        if(product) productDetails(product);
 })
 
 footer();

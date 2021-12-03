@@ -1,4 +1,4 @@
-import { productStrapiUrl, strapiUrl } from "../constants/strapiUrl.js"
+import { strapiUrl } from "../constants/strapiUrl.js"
 
 export default function cardsProducts (products){
     const cardsContainer = document.getElementById("cards-container");
