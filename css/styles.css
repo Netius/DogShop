@@ -11134,6 +11134,36 @@ textarea.form-control-lg {
   font-family: "montserrat-bold";
   src: url("../fonts/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat-Bold.ttf") format("truetype"), url("../fonts/Montserrat-Bold#svgFontName") format("svg");
 }
+.btn-primary {
+  color: #222326;
+  background-color: #D9C2AD8C;
+  border-color: rgba(205, 175, 147, 0.5490196078);
+}
+.btn-primary:hover {
+  color: #222326;
+  background-color: rgba(225, 207, 190, 0.5490196078);
+  border-color: rgba(233, 220, 208, 0.5490196078);
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: #222326;
+  background-color: rgba(225, 207, 190, 0.5490196078);
+  border-color: rgba(233, 220, 208, 0.5490196078);
+  box-shadow: 0 0 0 0.25rem rgba(151, 130, 112, 0.5);
+}
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+  color: #000;
+  background-color: rgba(232, 218, 206, 0.6392156863);
+  border-color: rgba(216, 193, 172, 0.5941176471);
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(151, 130, 112, 0.5);
+}
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #000;
+  background-color: #D9C2AD8C;
+  border-color: rgba(205, 175, 147, 0.5490196078);
+}
+
 .btn-feature {
   font-size: 1.3rem;
   letter-spacing: 3px;
@@ -11249,6 +11279,10 @@ body {
 }
 .banner__textct {
   background-color: white;
+}
+
+.details {
+  border: none !important;
 }
 
 .footer {

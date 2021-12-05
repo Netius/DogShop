@@ -20,6 +20,17 @@ $colours: (
 $dark: getColor("dark-text");
 $primary: getColor("dark-text");
 
+// Color for primary button 
+$buttonColorPrimary:getColor("light-brown");
+.btn-primary {
+    @include button-variant($buttonColorPrimary, 
+                            darken($buttonColorPrimary, 7.5%), 
+                            $dark,
+                            lighten($buttonColorPrimary,5%), 
+                            lighten($buttonColorPrimary, 10%), 
+                            $dark);
+}
+
 .btn-feature {
     font-size: 1.3rem;
     letter-spacing: 3px;
