@@ -4,6 +4,7 @@ import { productStrapiUrl } from "./js/constants/strapiUrl.js";
 import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import getUrlParamsId from "./js/utils/getUrlParamsId.js";
 import productDetails from "./js/components/details/productDetails.js";
+import carrouselProducts from "./js/components/details/carrouselProducts.js";
 
 const productId= getUrlParamsId();
 
@@ -12,5 +13,9 @@ fetchStrapi(productStrapiUrl + productId, "#details-container")
         if(product) productDetails(product);
 })
 
+fetchStrapi(productStrapiUrl ,"#carrousel-message")
+    .then(products => {
+        carrouselProducts(products);
+    })
 footer();
 

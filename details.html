@@ -77,54 +77,44 @@
         </div>
     </div>
 
-    <div class="my-5 text-center container-xl recomendation position-relative">
-        <div class="row py-5">
-           <div class="col text-center">
-              <h2 class="display-6">Your Pet may like these</h2>
-           </div>
-        </div>
-        <div class="position-relative">
-            <a class="position-absolute top-50 start-0 translate-middle-y recomendation__arrow--left btn btn-primary zoom-button text-dark" href="#productsCarrousel" role="button" data-bs-slide="prev" title="Show previous">
-                  <i class="fas fa-chevron-left fa-3x"></i>
-            </a>
-        <div class="row d-flex align-items-center">
-           <div class="col-12 col-sm-12">
-              <!--Start carousel-->
-              <div id="productsCarrousel" class="carousel slide" data-bs-ride="carousel">
-     
-                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                       <div class="row">
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun04.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun02.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun05.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                             <h3 class="text-white">Text in the panel.</h3>
-                          </div>
-                       </div>
+    <div class="container-xl">
+        <h2 class="text-center my-5 py-3 display-6">Your Pet may like these</h2>
+        <div id="carrousel-message"></div> 
+        <div class="row">
+            <div class="col-md-12 mx-auto">
+                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000000">
+                
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner pt-4">
+                        <div class="carousel-item active">
+                            <div class="row" id="carrousel-first">
+                            
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row"  id="carrousel-second">
+                            
+                            </div>
+                        </div>
+                        <!-- <div class="carousel-item">
+                            <div class="row">
+                            </div>   
+                        </div> -->
                     </div>
-                    <div class="carousel-item">
-                       <div class="row">
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun01.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun03.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                          <div style="background-image:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/flexfun06.jpg');" class="col-12 col-md d-flex align-items-center justify-content-center">
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-              <!--End carousel-->
-           </div>
+                    <!-- Carousel controls -->
+                    <a class="position-absolute top-50 start-0 translate-middle-y recomendation__arrow--left btn btn-primary zoom-button text-dark" href="#myCarousel" data-bs-slide="prev" title="Show previous">
+                        <i class="fas fa-chevron-left fa-2x"></i>
+                    </a>
+        
+                    <a class="btn btn-primary text-dark position-absolute top-50 end-0 translate-middle-y recomendation__arrow--right" href="#myCarousel" data-bs-slide="next" title="Show next">
+                        <i class="fas fa-chevron-right fa-2x"></i>
+                    </a>
+                </div>
+
+
+            </div>
         </div>
-            <a class="btn btn-primary text-dark position-absolute top-50 end-0 translate-middle-y recomendation__arrow--right" href="#productsCarrousel" data-bs-slide="next" title="Show next">
-                    <i class="fas fa-chevron-right fa-3x"></i>
-            </a>
-        </div>
-     </div>
-    
+    </div>
     <div id="footer-container"></div>
     <script src="details.js" type="module"></script>
 </body>
