@@ -2,12 +2,12 @@ import { strapiUrl } from "../constants/strapiUrl.js"
 
 export default function cardsProducts (products){
     const cardsContainer = document.getElementById("cards-container");
-    console.log(products)
-    cardsContainer.innerHTML = "";
-    // TODO show only first 3 featured
-    products.forEach(product => {        
-        if(!product.featured) return; 
+    let counter = 0;
 
+    products.forEach(product => {      
+        if(!product.featured) return; 
+        if(counter === 3) return;
+        
         cardsContainer.innerHTML += `
         <div class="col-lg-4 col-md-6 mb-4">
             <a href="details.html?id=${product.id}" title="Shop ${product.title}">    
@@ -23,8 +23,10 @@ export default function cardsProducts (products){
                 </div>
             </a>    
         </div>
-
         `;
+        counter++;
+       
+
     })
    
     return cardsContainer;
