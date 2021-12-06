@@ -2,7 +2,7 @@ import { strapiUrl } from "../../constants/strapiUrl.js";
 
 export default function carrouselProducts(products){
     const carrouselContainer = document.getElementById("carrousel-container");
-  
+    // TODO not show same product if already in details
     let counter = 0;
     let firstSlider, secondSlider, thirdSlider, allSlider = "";
 
