@@ -12,7 +12,7 @@ export default function productDetails(product){
                         <h2 class="display-6 mt-3">${product.title}</h2>
                         <p>${product.description}</p>
                         <p class="mt-5 mb-3 h3">$${product.price}</p>
-                        <button class="zoom-button btn btn-primary btn-rounded mr-1" data-toggle="tooltip" title="Add to cart" data-original-title="Add to cart">
+                        <button class="zoom-button btn btn-primary mr-1" data-toggle="tooltip" title="Add to cart" data-original-title="Add to cart">
                             <i class="fa fa-shopping-cart"></i>
                         </button>
                         <button class="ms-1 zoom-button fs-6 btn btn-feature" 

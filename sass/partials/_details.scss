@@ -1,4 +1,30 @@
 .details{
     border: none !important; 
-
 }
+
+.recomendation{
+    &__arrow{
+        &--left{
+            z-index: 1000;
+           
+        }
+        &--right{
+            z-index: 1000;
+            
+        }
+       
+    }
+}
+
+.carousel-nav-icon {
+    height: 48px;
+    width: 48px;
+ }
+ .carousel-item {
+    .col, .col-sm, .col-md {
+       margin: 8px;
+       height: 300px;
+       background-size: cover;
+       background-position: center center;
+    }
+ }
