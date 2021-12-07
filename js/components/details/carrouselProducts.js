@@ -24,39 +24,34 @@ export default function carrouselProducts(products){
         </div>
         `
     if(counter === 2){
-        firstSlider = `
-        <div class="carousel-item active">
-            <div class="row">${allSlider}</div>
-        </div>
-        `; 
+        firstSlider = createSlideContainer(allSlider, "active");
         allSlider = "";     
     }
     if(counter === 5){
-        secondSlider = `
-        <div class="carousel-item">
-            <div class="row">${allSlider}</div>
-        </div>
-        `; 
+        secondSlider = createSlideContainer(allSlider);
         allSlider = "";     
     }
     
     if(counter === 8){
-        thirdSlider = `
-        <div class="carousel-item">
-            <div class="row">${allSlider}</div>
-        </div>
-        `; 
+        thirdSlider = createSlideContainer(allSlider);
         allSlider = "";     
     }
-    counter ++;
-    
 
+    counter ++;
     if(counter > 8) return;
 
 });
 
 carrouselContainer.innerHTML = firstSlider + secondSlider + thirdSlider;
-
-return ;
+return carrouselContainer;
     
+}
+
+function createSlideContainer(slider, firstActive){
+    let sliderHtml = `
+    <div class="carousel-item ${firstActive}">
+        <div class="row">${slider}</div>
+    </div>
+    `; 
+    return sliderHtml;
 }
