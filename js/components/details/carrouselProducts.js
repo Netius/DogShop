@@ -1,12 +1,17 @@
 import { strapiUrl } from "../../constants/strapiUrl.js";
+import getUrlParamsId from "../../utils/getUrlParamsId.js";
 
 export default function carrouselProducts(products){
     const carrouselContainer = document.getElementById("carrousel-container");
-    // TODO not show same product if already in details
     let counter = 0;
     let firstSlider, secondSlider, thirdSlider, allSlider = "";
-
+    let paramsProductId = getUrlParamsId();
+    
     products.forEach(product => {  
+    
+    // Dont show same product in carrousel if already open in details
+    if(product.id == paramsProductId) return    
+
     allSlider += `
         <div class="col-lg-4 col-md-6 mb-4">
             <a href="details.html?id=${product.id}" title="Shop ${product.title}">    

@@ -2,7 +2,7 @@ import { strapiUrl } from "../../constants/strapiUrl.js";
 
 export default function productDetails(product){
     const detailsContainer = document.getElementById("details-container");
-    console.log(product)
+
     detailsContainer.innerHTML = `
                 <div class="row py-5">
                     <div class="col-lg-6 col-sm-9">
