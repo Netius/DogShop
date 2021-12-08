@@ -15,6 +15,7 @@ fetchStrapi(productStrapiUrl + productId, "#details-container")
 
 fetchStrapi(productStrapiUrl ,"#carrousel-message")
     .then(products => {
+        if(products.length < 3) return
         carrouselProducts(products);
     })
 footer();
