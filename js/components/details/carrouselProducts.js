@@ -29,16 +29,16 @@ export default function carrouselProducts(products){
         </div>
         `
     if(counter === 2){
-        firstSlider = createSlideContainer(allSlider, "active");
+        firstSlider = createSlideContainer(allSlider, "carousel-item active");
         allSlider = "";     
     }
     if(counter === 5){
-        secondSlider = createSlideContainer(allSlider);
+        secondSlider = createSlideContainer(allSlider, "carousel-item");
         allSlider = "";     
     }
     
     if(counter === 8){
-        thirdSlider = createSlideContainer(allSlider);
+        thirdSlider = createSlideContainer(allSlider, "carousel-item");
         allSlider = "";     
     }
 
@@ -47,14 +47,38 @@ export default function carrouselProducts(products){
 
 });
 
-carrouselContainer.innerHTML = firstSlider + secondSlider + thirdSlider;
+const carrouselSlider =  firstSlider + secondSlider + thirdSlider;
+
+carrouselContainer.innerHTML = `
+    <h2 class="text-center my-5 py-3 display-6">Your Pet may like these</h2>
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <!-- Wrapper for carousel items -->
+                <div class="carousel-inner pt-4">
+                   ${carrouselSlider}
+                </div>
+                
+                <!-- Carousel controls -->
+                <a class="position-absolute top-50 start-0 translate-middle-y recomendation__arrow--left btn btn-primary zoom-button text-dark" href="#myCarousel" data-bs-slide="prev" title="Show previous">
+                    <i class="fas fa-chevron-left fa-2x"></i>
+                </a>
+
+                <a class="btn btn-primary text-dark position-absolute top-50 end-0 translate-middle-y recomendation__arrow--right" href="#myCarousel" data-bs-slide="next" title="Show next">
+                    <i class="fas fa-chevron-right fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </div>`
+
+
 return carrouselContainer;
     
 }
 
 function createSlideContainer(slider, firstActive){
     let sliderHtml = `
-    <div class="carousel-item ${firstActive}">
+    <div class="${firstActive}">
         <div class="row">${slider}</div>
     </div>
     `; 
