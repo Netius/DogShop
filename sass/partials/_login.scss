@@ -1,0 +1,22 @@
+.login{
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+    
+    &__container{
+        width: 100%;
+        max-width: 400px;
+        padding: 15px;
+        margin: auto;
+        background-color: white;
+
+    }
+    &__floating input{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    &__wrapper{
+        min-height: calc(100% - 226px);
+    }
+}
+

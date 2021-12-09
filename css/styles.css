@@ -11197,6 +11197,10 @@ textarea.form-control-lg {
   border-color: #a3cad4;
 }
 
+html, body {
+  height: 100%;
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-family: "montserrat-bold", sans-serif;
 }
@@ -11302,6 +11306,26 @@ body {
   height: 300px;
   background-size: cover;
   background-position: center center;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+}
+.login__container {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  margin: auto;
+  background-color: white;
+}
+.login__floating input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.login__wrapper {
+  min-height: calc(100% - 226px);
 }
 
 .footer {

@@ -2,7 +2,7 @@ export default function footer(){
     const footerContainer = document.getElementById("footer-container");
 
     footerContainer.innerHTML = `
-    <footer role="contentinfo" class="footer py-4">
+    <footer role="contentinfo" class="footer py-4 mt-auto">
     <div class="container-xl">
         <ul class=" navbar-nav text-center py-5 footer__container">
             <li>
