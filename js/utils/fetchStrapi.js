@@ -21,7 +21,7 @@ export async function fetchStrapi (url , spinnerTarget){
         })
 		.catch((error) => {
             console.log("error", error)
-            errorMessage(spinnerTarget, "Ooops! This shouldn't happen, my bad...")
+            errorMessage(spinnerTarget, "Ooops! This shouldn't happen, my bad...", "alert-warning")
         });    
 
 }

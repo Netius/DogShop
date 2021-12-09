@@ -11,7 +11,7 @@ export function displayBigSpinner(target, message){
     const spinnerTarget = document.querySelector(target);
     
     return spinnerTarget.innerHTML = `
-        <div class="alert alert-info">
+        <div class="alert alert-info text-center">
             ${message}
             <span class="spinner-grow spinner-grow-sm text-dark" role="status"></span>
             <span class="spinner-grow spinner-grow-sm text-secondary" role="status"></span>

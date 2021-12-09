@@ -1,8 +1,8 @@
-export function errorMessage(target, message){
+export function errorMessage(target, message , cssClass){ 
     const messageTarget = document.querySelector(target);
     
     return messageTarget.innerHTML = `
-        <div class="alert alert-warning text-center" role="alert">
+        <div class="alert ${cssClass} text-center" role="alert">
             ${message}
         </div> 
        `;
