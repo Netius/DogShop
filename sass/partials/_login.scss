@@ -1,12 +1,13 @@
 .login{
     display: flex;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 40px;
     
     &__container{
         width: 100%;
-        max-width: 400px;
-        padding: 15px;
+        max-width: 370px;
+        // margin: 10px !important;
+        padding: 10px;
         margin: auto;
         background-color: white;
 

@@ -19,3 +19,8 @@ export function displayBigSpinner(target, message){
         </div> 
        `;
 }
+
+export function cleanSpinner(target){
+    const cleanTarget = document.querySelector(target);
+    return cleanTarget.innerHTML =``;
+}

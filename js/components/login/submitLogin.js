@@ -1,5 +1,5 @@
 import { errorMessage } from "../../utils/errorMessage.js";
-// import doLogin from "./doLogin.js"
+import doLogin from "./doLogin.js";
 
 export function submitLogin (event){
     event.preventDefault();
@@ -19,5 +19,5 @@ export function submitLogin (event){
         return
     }
 
-    // doLogin(inputEmailValue, inputpasswordValue)
+    doLogin(inputEmailValue, inputpasswordValue)
 }
