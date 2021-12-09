@@ -1,5 +1,7 @@
 .details{
-    border: none !important; 
+    min-height: 652px;
+    background-color: white;
+    border: none !important;
 }
 
 .recomendation{
@@ -27,4 +29,10 @@
        background-size: cover;
        background-position: center center;
     }
+ }
+ .carrousel__container{
+     min-height: 390px;
+ }
+ .cards__container{
+     min-height: 365px;
  }

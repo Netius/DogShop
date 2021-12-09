@@ -50,8 +50,7 @@ export default function carrouselProducts(products){
 const carrouselSlider =  firstSlider + secondSlider + thirdSlider;
 
 carrouselContainer.innerHTML = `
-    <h2 class="text-center my-5 py-3 display-6">Your Pet may like these</h2>
-    <div class="row">
+    <div class="row carrousel__container">
         <div class="col-md-12 mx-auto">
             <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <!-- Wrapper for carousel items -->

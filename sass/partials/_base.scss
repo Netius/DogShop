@@ -15,3 +15,6 @@ body{
     color:  getColor("dark-text");
     background-color:  getColor("background-light");
 }
+.wrapper{
+    min-height: calc(100% - 226px);
+}

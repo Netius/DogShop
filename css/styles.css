@@ -11215,6 +11215,10 @@ body {
   background-color: #F2F2F0;
 }
 
+.wrapper {
+  min-height: calc(100% - 226px);
+}
+
 .navigation {
   background-color: #D9C2AD8C !important;
 }
@@ -11286,6 +11290,8 @@ body {
 }
 
 .details {
+  min-height: 652px;
+  background-color: white;
   border: none !important;
 }
 
@@ -11308,6 +11314,14 @@ body {
   background-position: center center;
 }
 
+.carrousel__container {
+  min-height: 390px;
+}
+
+.cards__container {
+  min-height: 365px;
+}
+
 .login {
   display: flex;
   align-items: center;
@@ -11323,9 +11337,6 @@ body {
 .login__floating input {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-.login__wrapper {
-  min-height: calc(100% - 226px);
 }
 
 .footer {

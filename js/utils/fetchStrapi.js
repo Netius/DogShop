@@ -4,7 +4,7 @@ import { displayBigSpinner } from "../utils/spinner.js";
 
 
 export async function fetchStrapi (url , spinnerTarget){
-    displayBigSpinner(spinnerTarget, "Loading")
+    displayBigSpinner(spinnerTarget, "Loading");
     var myHeaders = new Headers();
 	myHeaders.append("Content-Type", "application/json");
 
