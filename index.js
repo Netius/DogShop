@@ -18,7 +18,7 @@ fetchStrapi(heroStrapiUrl, "#hero__spinner")
 })
 
 // Send api url and container for loading and error message.
-fetchStrapi(productStrapiUrl, "#cards-container")
+fetchStrapi(productStrapiUrl, "#cards-message")
     .then(products => {
        if(products) cardsProducts(products);
     });
