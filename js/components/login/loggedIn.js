@@ -4,6 +4,7 @@ import { clearStorage, getUser } from "../../utils/storage.js";
 const user = getUser(); 
 
 export default function logggedIn(token){
+    
     const loginLink = document.getElementById("login-container");
     const adminLink = document.getElementById("admin-container");
     let activeLink = "";
@@ -14,7 +15,7 @@ export default function logggedIn(token){
     if(token){
         adminLink.innerHTML=`
         <a class="nav-link zoom ${activeLink}" title="Administrator page" href="admin.html">
-            Admin+
+            Admin
         </a>
         `;
 
