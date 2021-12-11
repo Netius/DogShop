@@ -33,8 +33,14 @@
 }
 .zoom{
     transition: transform .3s;
-    transform-origin: left bottom;
+    transform-origin: center center;
 }
 .zoom:hover{
     transform: scale(1.15);
+}
+
+@media only screen and (max-width: 991px) {
+    .zoom{
+        transform-origin: left bottom;
+    }
 }
