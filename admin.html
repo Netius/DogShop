@@ -5,8 +5,8 @@
     <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>DogShop - Login</title>
-    <meta name="description" content="DogShop - Administrator login page." />
+    <title>DogShop - Administrator</title>
+    <meta name="description" content="DogShop - Administrator page." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
@@ -57,12 +57,7 @@
                                     <span
                                         class="badge rounded-pill badge-notifications bg-danger navigation__cart--total">1</span>
                                 </a>
-
-                                <a class="nav-link text-reset navigation__admin zoom active" title="Login to admin page"
-                                    href="login.html" id="login-link" role="link">
-                                    Login
-                                    <i class="fas fa-sign-in-alt fa-lg"></i>
-                                </a>
+                                <div id="login-container"></div>
                             </div>
                         </div>
                     </div>
@@ -70,30 +65,14 @@
             </nav>
         </header>
         <main role="main">
-            <article class="login">
-                <div class="text-center login__container p-5">
-                    <img class="mb-4" src="/images/favicon/safari-pinned-tab.svg" width="50" alt="Dogshop logo">
-                    <form>
-                        <h1 class="mb-3 display-6">Please log in</h1>
-
-                        <div class="login__floating">
-                            <input type="email" class="form-control mb-2" id="input-email" placeholder="name@email.com">
-                        </div>
-                        <div class="login__floating">
-                            <input type="password" class="form-control" id="input-password" placeholder="password">
-                        </div>
-                        <button class="w-100 zoom-button px-5 py-3 btn btn-feature mt-3 mb-2" id="btn-login"
-                            type="submit">Log in <span class="align-text-bottom login-spinner"></span>
-                        </button>
-                        <div id="login-message"></div>
-                    </form>
-                </div>
+            <article class="admin">
+                
             </article>
         </main>
 
     </div>
     <div id="footer-container"></div>
-    <script src="/login.js" type="module"></script>
+    <script src="/admin.js" type="module"></script>
 </body>
 
 </html>
