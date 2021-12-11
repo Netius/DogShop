@@ -8,80 +8,88 @@
     <title>DogShop - Details</title>
     <meta name="description" content="DogShop - Details of the products in store." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-	<link rel="manifest" href="/images/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#d9c2ad">
-	<link rel="shortcut icon" href="/images/favicon/favicon.ico">
-	<meta name="msapplication-TileColor" content="#d9c2ad">
-	<meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
-	<meta name="theme-color" content="#d9c2ad">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#d9c2ad">
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#d9c2ad">
+    <meta name="msapplication-config" content="/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#d9c2ad">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
     <div class="wrapper">
-    <nav class="navbar navbar-expand-lg navbar-light navigation pt-5 pb-5">
-        <div class="container-xl">
-            <a class="navbar-brand zoom" href="index.html" title="DogShop | Home">
-                <img alt="Dogshop-logo" class="navigation__logo me-4" src="../images/dogshop-logo.svg" />
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ">
-                    <li class="nav-item zoom">
-                        <a class="nav-link" title="Shop all Wear clothes to your dog." href="products.html">Wear</a>
-                    </li>
-                    <li class="nav-item zoom">
-                        <a class="nav-link" title="Shop all Food your dog wants." href="products.html">Food</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link zoom" title="Shop all Play toys to your dog." href="products.html">Play</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link zoom active" title="Shop all to your dog." href="products.html">Shop all</a>
-                    </li>
-                </ul>
-                <!-- <form class="d-flex navigation__search me-3 ms-3">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light navigation pt-5 pb-5">
+                <div class="container-xl">
+                    <a class="navbar-brand zoom" href="index.html" title="DogShop | Home">
+                        <img alt="Dogshop-logo" class="navigation__logo me-4" src="../images/dogshop-logo.svg" />
+                    </a>
+                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item zoom">
+                                <a class="nav-link" title="Shop all Wear clothes to your dog."
+                                    href="products.html">Wear</a>
+                            </li>
+                            <li class="nav-item zoom">
+                                <a class="nav-link" title="Shop all Food your dog wants." href="products.html">Food</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link zoom" title="Shop all Play toys to your dog."
+                                    href="products.html">Play</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link zoom active" title="Shop all to your dog." href="products.html">Shop
+                                    all</a>
+                            </li>
+                        </ul>
+                        <!-- <form class="d-flex navigation__search me-3 ms-3">
                     <input class="form-control " type="search" placeholder="Search" aria-label="Search" />
                     <i class="fas fa-search navigation__search--icon fa-lg"></i>
                 </form> -->
-                <div class="d-flex ms-auto">
-                    <div class="d-flex align-items-center">
-                        <a class="text-reset ms-2 navigation__cart zoom" title="See your shopping cart" href="cart.html" role="link">
-                            <i class="fas fa-shopping-cart fa-lg"></i>
-                            <span
-                                class="badge rounded-pill badge-notifications bg-danger navigation__cart--total">1</span>
-                        </a>
-                        <div id="login-container"></div>
+                        <div class="d-flex ms-auto">
+                            <div class="d-flex align-items-center">
+                                <a class="text-reset ms-2 navigation__cart zoom" title="See your shopping cart"
+                                    href="cart.html" role="link">
+                                    <i class="fas fa-shopping-cart fa-lg"></i>
+                                    <span
+                                        class="badge rounded-pill badge-notifications bg-danger navigation__cart--total">1</span>
+                                </a>
+                                <div id="login-container"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </nav>
-    <main role="main">
-        <div class="container-xl">
-            <div class="card py-4 details">
-                <div class="card-body px-5">
-                    <h1 class="card-title display-5">Details</h1>
-                    <div id="details-container"></div>
+            </nav>
+        </header>
+        <main role="main">
+            <article>
+                <div class="container-xl">
+                    <div class="card py-4 details">
+                        <div class="card-body px-5">
+                            <h1 class="card-title display-5">Details</h1>
+                            <div id="details-container"></div>
+                        </div>
+                    </div>
                 </div>
+            </article>
+        </main>
+        <section>
+            <div class="container-xl">
+                <h2 class="text-center my-5 py-3 display-6">Your Pet may like these</h2>
+                <div id="carrousel-message"></div>
+                <div id="carrousel-container"></div>
+
             </div>
-        </div>
-    </main>
-    <section>
-        <div class="container-xl">
-            <h2 class="text-center my-5 py-3 display-6">Your Pet may like these</h2>
-            <div id="carrousel-message"></div> 
-            <div id="carrousel-container"></div>
-            
-        </div>
-    </section>
+        </section>
     </div>
 
     <div id="footer-container"></div>
