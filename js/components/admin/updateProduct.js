@@ -8,10 +8,8 @@ import { productsTable } from "./productsTable.js";
 
 
 export default async function updateProduct() {
-    // if (!confirm("Update this product?")) return;
+  
     const productId = event.target.dataset.id;
-    displaySpinner("#button-update-" + productId);
-
     const inputTitle = document.querySelector("#input-title-" + productId).value;
     const inputPrice = document.querySelector("#input-price-" + productId).value;
     const inputDescription = document.querySelector("#input-description-" + productId).value;
@@ -20,6 +18,9 @@ export default async function updateProduct() {
     const inputImage = document.querySelector("#input-image-" + productId).value.split("\\");
     const fileName = inputImage[inputImage.length - 1];// Gets only the name of image, without the fakepath
 
+    if (!confirm(`Update the product '${inputTitle}'?`)) return;
+    displaySpinner("#button-update-" + productId);
+    
     const token = getToken();
 
     const data = JSON.stringify({
@@ -44,12 +45,10 @@ export default async function updateProduct() {
         const json = await response.json();
 
         if (response.ok) {
-            errorMessage(`#message-update-${productId}`, "Product updated.", "alert-success");
-            document.getElementById("products-table").innerHTML = "";
             fetchStrapi(productStrapiUrl, "#admin-message")
                 .then(products => {
-                    console.log(products);
                     productsTable(products);
+                    alert(`Product '${inputTitle}' is updated.`);
                 })
         }
     }
