@@ -1,5 +1,6 @@
 import { pageName } from "../../utils/pageName.js";
-import { clearStorage, getUser } from "../../utils/storage.js";
+import { getUser } from "../../utils/storage.js";
+import doLogout from "./doLogout.js";
 
 const user = getUser(); 
 
@@ -26,7 +27,7 @@ export default function logggedIn(token){
         </a>`
 
         const logoutBtn = document.getElementById("logout-link");
-        logoutBtn.addEventListener("click" , clearStorage);
+        logoutBtn.addEventListener("click" , doLogout);
 
         return loginLink;
     }
