@@ -1,12 +1,14 @@
 import { strapiUrl } from "../../constants/strapiUrl.js";
+import hasProductImage from "../../utils/hasProductImage.js";
 
 export default function productDetails(product){
     const detailsContainer = document.getElementById("details-container");
-
+    const productImageUrl = hasProductImage(product);
+    
     detailsContainer.innerHTML = `
                 <div class="row py-5">
                     <div class="col-lg-6 col-sm-9">
-                        <img src="${strapiUrl}${product.image?.url}" class="w-100 img-responsive">
+                        <img src="${productImageUrl}" class="w-100 img-responsive">
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <h2 class="display-6 mt-3">${product.title}</h2>

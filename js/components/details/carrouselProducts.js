@@ -1,5 +1,6 @@
 import { strapiUrl } from "../../constants/strapiUrl.js";
 import getUrlParamsId from "../../utils/getUrlParamsId.js";
+import hasProductImage from "../../utils/hasProductImage.js";
 
 export default function carrouselProducts(products){
     const carrouselContainer = document.getElementById("carrousel-container");
@@ -12,12 +13,14 @@ export default function carrouselProducts(products){
     // Dont show same product in carrousel if already open in details
     if(product.id == paramsProductId) return    
 
+    let productImageUrl = hasProductImage(product);
+    
     allSlider += `
         <div class="col-lg-4 col-md-6 mb-4">
             <a href="details.html?id=${product.id}" title="Shop ${product.title}">    
                 <div class="card rounded shadow-lg border-0 h-100 zoom-button">
                     <div class="card-body text-center p-0">
-                        <img src="${strapiUrl}${product.image?.url}"
+                        <img src="${productImageUrl}"
                             alt="${product.title}" class="img-fluid w-100 d-block mx-auto mb-3">
                         <h3 class="fs-5 nav-item">
                             <a href="../details.html?id=${product.id}" title="Shop ${product.title}" class="nav-link text-dark">${product.title}</a>

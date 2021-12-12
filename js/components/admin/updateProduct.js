@@ -45,10 +45,10 @@ export default async function updateProduct() {
         const json = await response.json();
 
         if (response.ok) {
+            alert(`Product '${inputTitle}' is updated.`);
             fetchStrapi(productStrapiUrl, "#admin-message")
                 .then(products => {
                     productsTable(products);
-                    alert(`Product '${inputTitle}' is updated.`);
                 })
         }
     }

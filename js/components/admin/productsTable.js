@@ -1,9 +1,9 @@
-// import deleteProduct from "./deleteProduct.js";
-// import updateProduct from "./updateProduct.js";
-
 import { strapiUrl } from "../../constants/strapiUrl.js";
 import isFeatured from "../../utils/isFeatured.js";
 import updateProduct from "./updateProduct.js";
+import deleteProduct from "./deleteProduct.js";
+import hasProductImage from "../../utils/hasProductImage.js";
+
 
 export function productsTable(products){
     const table = document.getElementById("products-table");
@@ -13,11 +13,13 @@ export function productsTable(products){
         let featured = "";
         if(isFeatured(product.featured)) featured = "checked";
 
+        let productImageUrl = hasProductImage(product);
+
         table.innerHTML += `
         <tr>
-        <td width="50">${product.id}</td>
+        <td>${product.id}</td>
         <td>
-            <img src="${strapiUrl}${product.image.url}" class="img-responsive w-100">
+            <img src="${productImageUrl}" class="img-responsive w-100">
         </td>
         <td>${product.title}</td>
         <td>${product.description}</td>
@@ -33,9 +35,9 @@ export function productsTable(products){
                 <i class="far fa-edit"></i>
             </button>
         </td>
-        <td class="text-end">
+        <td>
             <button data-id=${product.id} type="button" class="btn btn-sm btn-danger button-delete" title="Delete product">
-                <i class="fas fa-trash"></i>
+                <i class="fas fa-trash"></i><span id="button-delete-${product.id}"></span> 
             </button>
         </td>
         </tr>
@@ -73,10 +75,6 @@ export function productsTable(products){
         </tr>
         `  
     });
-
-    function deleteProduct(){
-        console.log("DELETED")
-    }   
 
     const buttonDelete = document.querySelectorAll(".button-delete");
     buttonDelete.forEach(button => button.addEventListener("click" , deleteProduct));
