@@ -17,7 +17,7 @@ export default function carrouselProducts(products){
             <a href="details.html?id=${product.id}" title="Shop ${product.title}">    
                 <div class="card rounded shadow-lg border-0 h-100 zoom-button">
                     <div class="card-body text-center p-0">
-                        <img src="${strapiUrl}${product.image.url}"
+                        <img src="${strapiUrl}${product.image?.url}"
                             alt="${product.title}" class="img-fluid w-100 d-block mx-auto mb-3">
                         <h3 class="fs-5 nav-item">
                             <a href="../details.html?id=${product.id}" title="Shop ${product.title}" class="nav-link text-dark">${product.title}</a>

@@ -6,7 +6,7 @@ export default function productDetails(product){
     detailsContainer.innerHTML = `
                 <div class="row py-5">
                     <div class="col-lg-6 col-sm-9">
-                        <img src="${strapiUrl}${product.image.url}" class="w-100 img-responsive">
+                        <img src="${strapiUrl}${product.image?.url}" class="w-100 img-responsive">
                     </div>
                     <div class="col-lg-6 col-sm-12">
                         <h2 class="display-6 mt-3">${product.title}</h2>
