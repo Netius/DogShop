@@ -8,7 +8,7 @@ import { productsTable } from "./productsTable.js";
 
 
 export default async function updateProduct() {
-  
+    event.preventDefault();
     const productId = event.target.dataset.id;
     const inputTitle = document.querySelector("#input-title-" + productId).value;
     const inputPrice = document.querySelector("#input-price-" + productId).value;

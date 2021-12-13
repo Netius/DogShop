@@ -25,9 +25,10 @@ export default function addForm(){
             <label for="input-description" class="form-label">Description</label>
             <textarea placeholder="Write a short description about the product" class="form-control" id="textarea-description" rows="3" required></textarea>
         </div>
-
-        <button type="submit" class="btn btn-success" id="button-addproduct">Add <span id="button-add"></span></button>
-        <div id="message-add" class="mt-3"></div>
+        <div>
+            <button type="submit" class="w-100 btn btn-success" id="button-addproduct">Add <span id="button-add"></span></button>
+            <div id="message-add" class="mt-3"></div>
+        </div>    
     </form>
     `
     const formAdd = document.getElementById("form-product");

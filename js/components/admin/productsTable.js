@@ -16,33 +16,33 @@ export function productsTable(products){
 
         table.innerHTML += `
         <tr>
-        <td>${product.id}</td>
-        <td>
-            <img src="${productImageUrl}" class="img-responsive w-100">
-        </td>
-        <td>${product.title}</td>
-        <td>${product.description}</td>
-        <td class="text-center">${product.price}</td>
-        <td class="text-center">
-            <input type="checkbox" ${featured} disabled class="form-check-input" 
-                id="featuredCheck-${product.id}">
-        </td>
-        <td class="text-end">
-            <button data-id=${product.id} type="button" class="btn btn-sm btn-info"
-                data-bs-toggle="collapse" data-bs-target="#edit-product-${product.id}" 
-                aria-expanded="false" aria-controls="editProduct" title="Edit product">
-                <i class="far fa-edit"></i>
-            </button>
-        </td>
-        <td>
-            <button data-id=${product.id} type="button" class="btn btn-sm btn-danger button-delete" title="Delete product">
-                <i class="fas fa-trash"></i><span id="button-delete-${product.id}"></span> 
-            </button>
-        </td>
+            <td>${product.id}</td>
+            <td>
+                <img src="${productImageUrl}" class="img-responsive w-100">
+            </td>
+            <td>${product.title}</td>
+            <td>${product.description}</td>
+            <td class="text-center">${product.price}</td>
+            <td class="text-center">
+                <input type="checkbox" ${featured} disabled class="form-check-input" 
+                    id="featuredCheck-${product.id}">
+            </td>
+            <td class="text-end">
+                <button data-id=${product.id} type="button" class="btn btn-sm btn-info"
+                    data-bs-toggle="collapse" data-bs-target="#edit-product-${product.id}" 
+                    aria-expanded="false" aria-controls="editProduct" title="Edit product">
+                    <i class="far fa-edit"></i>
+                </button>
+            </td>
+            <td>
+                <button data-id=${product.id} type="button" class="btn btn-sm btn-danger button-delete" title="Delete product">
+                    <i class="fas fa-trash"></i><span id="button-delete-${product.id}"></span> 
+                </button>
+            </td>
         </tr>
         <tr class="collapse" id="edit-product-${product.id}">
             <td colspan="8" class="p-0">
-            <form class="card-body bg-white p-5 row">
+            <form class="card-body bg-white p-5 m-1 row form-update"  data-id="${product.id}">
                 <h2 class="h4 mb-3">Edit product</h2>
                 <div class="col-auto mb-3">
                     <label for="input-title-${product.id}" class="form-label">Title</label>
@@ -66,9 +66,10 @@ export function productsTable(products){
                         id="input-description-${product.id}" rows="3" required>${product.description}
                     </textarea>
                 </div>
-
-                <button data-id="${product.id}" type="button" class="btn btn-success button-update">Update <span id="button-update-${product.id}"></span></button>
-                <div id="message-update-${product.id}" class="mt-3"></div>
+                <div>
+                    <button data-id="${product.id}" type="submit" class="w-100 btn btn-success">Update <span id="button-update-${product.id}"></span></button>
+                    <div id="message-update-${product.id}" class="mt-3"></div>
+                </div>
             </form>
             </td>
         </tr>
@@ -78,8 +79,8 @@ export function productsTable(products){
     const buttonDelete = document.querySelectorAll(".button-delete");
     buttonDelete.forEach(button => button.addEventListener("click" , deleteProduct));
 
-    const buttonUpdate = document.querySelectorAll(".button-update");
-    buttonUpdate.forEach(button => button.addEventListener("click" , updateProduct));
+    const formUpdate = document.querySelectorAll(".form-update");
+    formUpdate.forEach(form => form.addEventListener("submit" , updateProduct));
 
     return table;
 }
