@@ -50,6 +50,8 @@ export default async function updateProduct() {
                 .then(products => {
                     productsTable(products);
                 })
+
+            //TODO clearform 
         }
     }
     catch (error) {

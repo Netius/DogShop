@@ -5,6 +5,7 @@ import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import logggedIn from "./js/components/login/loggedIn.js";
 import { getToken } from "./js/utils/storage.js";
 import { productsTable } from "./js/components/admin/productsTable.js";
+import addForm from "./js/components/admin/addForm.js";
 
 const token = getToken();
 
@@ -13,10 +14,12 @@ if (!token) {
   location.href = "/login.html";
 } else {
   logggedIn(token);
+  addForm();
   fetchStrapi(productStrapiUrl, "#admin-message")
     .then(products => {
       productsTable(products);
     })
+
   footer();
 
 }

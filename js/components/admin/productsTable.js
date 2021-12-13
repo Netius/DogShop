@@ -1,4 +1,3 @@
-import { strapiUrl } from "../../constants/strapiUrl.js";
 import isFeatured from "../../utils/isFeatured.js";
 import updateProduct from "./updateProduct.js";
 import deleteProduct from "./deleteProduct.js";
@@ -42,8 +41,8 @@ export function productsTable(products){
         </td>
         </tr>
         <tr class="collapse" id="edit-product-${product.id}">
-            <td colspan="8">
-            <form class="bg-white p-4 row">
+            <td colspan="8" class="p-0">
+            <form class="card-body bg-white p-5 row">
                 <h2 class="h4 mb-3">Edit product</h2>
                 <div class="col-auto mb-3">
                     <label for="input-title-${product.id}" class="form-label">Title</label>
