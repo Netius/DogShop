@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +6,8 @@
     <script src="https://kit.fontawesome.com/c7b2c2ac29.js" crossorigin="anonymous"></script>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>DogShop - Home</title>
-    <meta name="description" content="DogShop - Everything for your best friend." />
+    <title>DogShop | Shop all</title>
+    <meta name="description" content="DogShop | Shop all for your pets." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
@@ -36,12 +37,10 @@
                     <div class="navbar-collapse collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ">
                             <li class="nav-item zoom">
-                                <a class="nav-link zoom active" title="DogShop | Homepage."
-                                    href="index.html">Home</a>
+                                <a class="nav-link zoom" title="DogShop | Homepage." href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link zoom " title="DogShop | Shop all." 
-                                    href="shop.html">Shop all</a>
+                                <a class="nav-link zoom active" title="DogShop | Shop all." href="shop.html">Shop all</a>
                             </li>
                             <li class="nav-item" id="admin-container"></li>
                         </ul>
@@ -65,60 +64,23 @@
             </nav>
         </header>
         <main role="main">
-            <article id="hero-container">
-                <div class="container-fluid hero__container">
-                    <div class="row hero__container--image">
-                        <div class="text-center">
-                            <div id="hero__spinner"></div>
-                            <div class="d-flex justify-content-center align-items-center h-100">
-                                <div class="text-white p-5 hero__container--text">
-                                    <h1 class="mb-3 display-1">Shop all</h1>
-                                    <p class="mb-5">Everything your best friend needs</p>
-                                    <a class="zoom-button px-5 py-3 btn btn-feature btn-lg" title="DogShop | Shop all"
-                                        href="shop.html" role="button">Shop now</a>
-                                </div>
-                            </div>
-                        </div>
+            <article>
+                <section class="container-xl pb-5" role="main">
+                    <div class="my-4 py-4">
+                        <h1 class="display-5">Shop all</h1>
+                        <p class="lead">Fashionable clothes and accessories to your pet.</p>
                     </div>
-                </div>
+                    <div id="cards__spinner"></div>
+                    <div class="row cards__container" id="cards-container">
+                        <div id="cards-message"></div>
+                    </div>
+                </section>
             </article>
         </main>
-        <section class="container-xl pb-5" role="main">
-            <div class="text-center my-5 py-4">
-                <h2 class="display-6">News in DogShop</h2>
-                <p class="lead">Checkout the news featured products for your pets here</p>
-            </div>
-            <div id="cards__spinner"></div>
-            <div class="row cards__container" id="cards-container">
-                <div id="cards-message"></div>
-            </div>
-        </section>
-
-        <section class="banner py-5">
-            <div class="container-xl">
-                <div class="row py-5 me-1 ms-1">
-                    <div class="col-md-6 ps-0 pe-0">
-                        <img src="../images/deals-of-week.jpg" alt="Deals of week Play"
-                            title="50% on Play toys for your dog." class="w-100 banner-image" />
-                    </div>
-                    <div class="col-md-6 text-center banner__textct">
-                        <div class="row align-items-center h-100 py-5">
-                            <div class="col">
-                                <h2 class="display-6 banner-header">Deals of the week</h2>
-                                <p class="lead pb-5 banner-lead">50% OFF on the dogs category <b>Play</b>.</p>
-                                <a class="zoom-button px-5 py-3 btn btn-feature btn-lg" title="DogShop | Shop now"
-                                    href="shop.html" role="button">
-                                    Shop now
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+       
     </div>
     <div id="footer-container"></div>
-    <script src="index.js" type="module"></script>
+    <script src="/shop.js" type="module"></script>
 </body>
 
 </html>

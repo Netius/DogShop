@@ -18,7 +18,7 @@ export default function productDetails(product){
                             <i class="fa fa-shopping-cart"></i>
                         </button>
                         <button class="ms-1 zoom-button fs-6 btn btn-feature" 
-                                    title="Buy now" href="products.html" role="button">
+                                    title="Buy now" href="shop.html" role="button">
                                     Buy now
                         </button>
                         <h3 class="mt-5">Features</h3>
