@@ -1,15 +1,12 @@
 import hasProductImage from "../utils/hasProductImage.js";
-import { pageName } from "../utils/pageName.js";
 
-export default function cardsProducts (products , pageName){
+export default function cardsProducts (products , numberOfCards){
     const cardsContainer = document.getElementById("cards-container");
     let counter = 0;
-    // let page = pageName();
-    products.forEach(product => { 
-        // TODO Needs to find how to use this on diferents components
+    numberOfCards = numberOfCards || "show all cards";
 
-        if(!product.featured || counter === 3) return; 
-       
+    products.forEach(product => {  
+        if(counter === numberOfCards) return; 
         
         const productImageUrl = hasProductImage(product);
         

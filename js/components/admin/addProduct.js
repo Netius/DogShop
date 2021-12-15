@@ -14,7 +14,7 @@ export default async function addNewProduct(event){
     const featured = document.getElementById("checkbox-featured");
     const description = document.getElementById("textarea-description");
 
-    if(!confirm(`Create a product '${title}' ?`)) return;
+    if(!confirm(`Create a product '${title.value.trim()}' ?`)) return;
     displaySpinner("#button-add")
     
     const token = getToken();
@@ -41,7 +41,7 @@ export default async function addNewProduct(event){
         const response = await fetch(productStrapiUrl , options);
         const json = await response.json();
        if(response.ok){
-        alert(`Product '${title}' is added.`);
+        alert(`Product '${title.value.trim()}' is added.`);
         fetchStrapi(productStrapiUrl, "#admin-message")
         .then(products => {
             productsTable(products);

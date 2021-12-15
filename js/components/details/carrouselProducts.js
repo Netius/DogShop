@@ -62,11 +62,11 @@ carrouselContainer.innerHTML = `
                 </div>
                 
                 <!-- Carousel controls -->
-                <a class="position-absolute top-50 start-0 translate-middle-y recomendation__arrow--left btn btn-primary zoom-button text-dark" href="#myCarousel" data-bs-slide="prev" title="Show previous">
+                <a class="position-absolute top-50 start-0 translate-middle-y recomendation__arrow--left btn btn-my-primary zoom-button text-dark" href="#myCarousel" data-bs-slide="prev" title="Show previous">
                     <i class="fas fa-chevron-left fa-2x"></i>
                 </a>
 
-                <a class="btn btn-primary text-dark position-absolute top-50 end-0 translate-middle-y recomendation__arrow--right" href="#myCarousel" data-bs-slide="next" title="Show next">
+                <a class="btn btn-my-primary text-dark position-absolute top-50 end-0 translate-middle-y recomendation__arrow--right" href="#myCarousel" data-bs-slide="next" title="Show next">
                     <i class="fas fa-chevron-right fa-2x"></i>
                 </a>
             </div>

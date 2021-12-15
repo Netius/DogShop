@@ -20,7 +20,10 @@ export function productsTable(products){
             <td>
                 <img src="${productImageUrl}" class="img-responsive w-100">
             </td>
-            <td>${product.title}</td>
+            <td>
+                <a class="link-my-secondary" href="details.html?id=${product.id}" title="Shop ${product.title}">
+                    ${product.title}
+            </td>
             <td>${product.description}</td>
             <td class="text-center">${product.price}</td>
             <td class="text-center">

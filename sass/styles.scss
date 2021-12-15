@@ -1,6 +1,7 @@
+@import "./partials/theming"; //Add this before bootstrap to theming colors
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import "./partials/fonts";
 @import "./partials/variables";
+@import "./partials/fonts";
 @import "./partials/base";
 @import "./partials/nav";
 @import "./partials/hero";
@@ -8,3 +9,4 @@
 @import "./partials/details";
 @import "./partials/login";
 @import "./partials/footer";
+
