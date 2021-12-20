@@ -28,11 +28,11 @@ export function saveToStorage(key, value) {
 }
 
 export function getFromStorage(key) {
-    const value = localStorage.getItem(key);
+    const value = JSON.parse(localStorage.getItem(key));
 
     if (!value) {
         return null;
     }
 
-    return JSON.parse(value);
+    return value;
 }
