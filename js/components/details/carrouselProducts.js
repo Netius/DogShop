@@ -18,7 +18,7 @@ export default function carrouselProducts(products){
     allSlider += `
         <div class="col-lg-4 col-md-6 mb-4">
             <a href="details.html?id=${product.id}" title="Shop ${product.title}">    
-                <div class="card rounded shadow-lg border-0 h-100 zoom-button">
+                <div class="card rounded shadow-sm border-0 h-100 zoom-button">
                     <div class="card-body text-center p-0">
                         <img src="${productImageUrl}"
                             alt="${product.title}" class="img-fluid w-100 d-block mx-auto mb-3">
@@ -53,9 +53,9 @@ export default function carrouselProducts(products){
 const carrouselSlider =  firstSlider + secondSlider + thirdSlider;
 
 carrouselContainer.innerHTML = `
-    <div class="row carrousel__container">
+    <div class="row carrousel__container pb-5">
         <div class="col-md-12 mx-auto">
-            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="40000000">
                 <!-- Wrapper for carousel items -->
                 <div class="carousel-inner pt-4">
                    ${carrouselSlider}
