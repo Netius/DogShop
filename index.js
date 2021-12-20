@@ -6,6 +6,7 @@ import { featuredProductUrl, heroStrapiUrl } from "./js/constants/strapiUrl.js";
 import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
 import logggedIn from "./js/components/login/loggedIn.js";
+import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 
 // Shows login user at nav
 const token = getToken();
@@ -16,6 +17,7 @@ if(!getFromStorage("products")){
     saveToStorage("products", []);
 }
 
+updateCartTotal();
 
 // Fetch hero image from strapi
 fetchStrapi(heroStrapiUrl, "#hero__spinner")

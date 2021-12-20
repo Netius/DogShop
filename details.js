@@ -7,6 +7,7 @@ import productDetails from "./js/components/details/productDetails.js";
 import carrouselProducts from "./js/components/details/carrouselProducts.js";
 import logggedIn from "./js/components/login/loggedIn.js";
 import { getFromStorage, getToken, saveToStorage } from "./js/utils/storage.js";
+import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 
 
 // Shows login user at nav
@@ -17,6 +18,8 @@ logggedIn(token);
 if(!getFromStorage("products")){
     saveToStorage("products", []);
 }
+
+updateCartTotal();
 
 const productId= getUrlParamsId();
 //Create details page

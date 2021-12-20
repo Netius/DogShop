@@ -6,8 +6,12 @@
     
     &__cart{
         position: relative;  
+        padding-right: 1.5rem;
         &--total{
-            float: right;
+            left: 75% !important;
+            height: 30px;
+            width: 30px;
+            line-height: 22px;
         }
     }
     &__search{

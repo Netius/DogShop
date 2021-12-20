@@ -5,11 +5,13 @@ import logggedIn from "./js/components/login/loggedIn.js";
 import { productStrapiUrl } from "./js/constants/strapiUrl.js";
 import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import cardsProducts from "./js/components/cards.js";
+import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 
 // Shows login user at nav
 const token = getToken();
 logggedIn(token);
 
+updateCartTotal();
 
 // Send api url and container for loading and error message.
 fetchStrapi(productStrapiUrl, "#cards-message")

@@ -6,6 +6,7 @@ import logggedIn from "./js/components/login/loggedIn.js";
 import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
 import { productsTable } from "./js/components/admin/productsTable.js";
 import addForm from "./js/components/admin/addForm.js";
+import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 
 const token = getToken();
 
@@ -20,10 +21,12 @@ if (!token) {
       productsTable(products);
     })
 
-// Saves empty products array in local storage
-if(!getFromStorage("products")){
-  saveToStorage("products", []);
-}
+  // Saves empty products array in local storage
+  if (!getFromStorage("products")) {
+    saveToStorage("products", []);
+  }
+
+  updateCartTotal();
 
   footer();
 
