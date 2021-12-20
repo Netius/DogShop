@@ -1,5 +1,5 @@
 import hasProductImage from "../../utils/hasProductImage.js";
-import addToCart from "./addToCart.js";
+import addToCart from "../cart/addToCart.js";
 
 
 export default function productDetails(product){
