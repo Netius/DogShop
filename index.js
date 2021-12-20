@@ -13,7 +13,7 @@ logggedIn(token);
 
 // Saves empty products array in local storage
 if(!getFromStorage("products")){
-    saveToStorage("products", "[]");
+    saveToStorage("products", []);
 }
 
 
