@@ -1,4 +1,5 @@
 import hasProductImage from "../../utils/hasProductImage.js";
+import addToCart from "./addToCart.js";
 
 
 export default function productDetails(product){
@@ -32,6 +33,7 @@ export default function productDetails(product){
     `
 
     const cartBtn = document.getElementById("cart-button");
-    cartBtn.addEventListener("click" , addToCart)
+    cartBtn.addEventListener("click" , addToCart);
+
     return detailsContainer;
 }

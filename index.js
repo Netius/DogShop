@@ -4,12 +4,18 @@ import footer from "./js/components/footer.js";
 import cardsProducts from "./js/components/cards.js";
 import { featuredProductUrl, heroStrapiUrl } from "./js/constants/strapiUrl.js";
 import { fetchStrapi } from "./js/utils/fetchStrapi.js";
-import { getToken } from "./js/utils/storage.js";
+import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
 import logggedIn from "./js/components/login/loggedIn.js";
 
 // Shows login user at nav
 const token = getToken();
 logggedIn(token);
+
+// Saves empty products array in local storage
+if(!getFromStorage("products")){
+    saveToStorage("products", "[]");
+}
+
 
 // Fetch hero image from strapi
 fetchStrapi(heroStrapiUrl, "#hero__spinner")

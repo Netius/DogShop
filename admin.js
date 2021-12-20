@@ -3,7 +3,7 @@ import footer from "./js/components/footer.js";
 import { productStrapiUrl } from "./js/constants/strapiUrl.js";
 import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import logggedIn from "./js/components/login/loggedIn.js";
-import { getToken } from "./js/utils/storage.js";
+import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
 import { productsTable } from "./js/components/admin/productsTable.js";
 import addForm from "./js/components/admin/addForm.js";
 
@@ -19,6 +19,11 @@ if (!token) {
     .then(products => {
       productsTable(products);
     })
+
+// Saves empty products array in local storage
+if(!getFromStorage("products")){
+  saveToStorage("products", "[]");
+}
 
   footer();
 
