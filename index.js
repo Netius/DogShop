@@ -7,6 +7,7 @@ import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
 import logggedIn from "./js/components/login/loggedIn.js";
 import updateCartTotal from "./js/components/cart/updateCartTotal.js";
+import searchForm from "./js/components/search/searchForm.js";
 
 // Shows login user at nav
 const token = getToken();
@@ -18,6 +19,7 @@ if(!getFromStorage("products")){
 }
 
 updateCartTotal();
+searchForm();
 
 // Fetch hero image from strapi
 fetchStrapi(heroStrapiUrl, "#hero__spinner")

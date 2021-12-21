@@ -7,6 +7,7 @@ import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
 import { productsTable } from "./js/components/admin/productsTable.js";
 import addForm from "./js/components/admin/addForm.js";
 import updateCartTotal from "./js/components/cart/updateCartTotal.js";
+import searchForm from "./js/components/search/searchForm.js";
 
 const token = getToken();
 
@@ -27,6 +28,7 @@ if (!token) {
   }
 
   updateCartTotal();
+  searchForm();
 
   footer();
 

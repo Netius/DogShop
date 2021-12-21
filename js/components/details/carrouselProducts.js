@@ -1,4 +1,3 @@
-import { strapiUrl } from "../../constants/strapiUrl.js";
 import getUrlParams from "../../utils/getUrlParams.js";
 import hasProductImage from "../../utils/hasProductImage.js";
 

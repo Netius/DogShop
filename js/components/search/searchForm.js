@@ -11,9 +11,10 @@ export default function searchForm(){
 
 function onSearchSubmit(e){
     e.preventDefault();
-    const inputSearch = document.getElementById("input-search").value.trim();
+    const inputSearch = document.getElementById("input-search").value.trim().toLowerCase();
     if(inputSearch === "") return;
 
+    // Redirect with search key word
     document.location = "../shop.html?search=" + inputSearch;
     
 }

@@ -7,13 +7,14 @@ import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import cardsProducts from "./js/components/cards.js";
 import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 import { searchProducts } from "./js/components/search/searchProducts.js";
+import searchForm from "./js/components/search/searchForm.js";
 
 // Shows login user at nav
 const token = getToken();
 logggedIn(token);
 
 updateCartTotal();
-
+searchForm();
 // Send api url and container for loading and error message.
 fetchStrapi(productStrapiUrl, "#cards-message")
     .then(products => {
