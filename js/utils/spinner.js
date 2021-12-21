@@ -2,7 +2,7 @@ export function displaySpinner(target){
     const spinnerTarget = document.querySelector(target);
 
     return spinnerTarget.innerHTML = `
-        <span class="spinner-border spinner-border-sm align-text-bottom" role="status">
+        <span class="spinner-border text-center spinner-border-sm align-text-bottom" role="status">
             <span class="sr-only">Loading</span>
         </span>`;
 }

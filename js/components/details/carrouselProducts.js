@@ -1,12 +1,12 @@
 import { strapiUrl } from "../../constants/strapiUrl.js";
-import getUrlParamsId from "../../utils/getUrlParamsId.js";
+import getUrlParams from "../../utils/getUrlParams.js";
 import hasProductImage from "../../utils/hasProductImage.js";
 
 export default function carrouselProducts(products){
     const carrouselContainer = document.getElementById("carrousel-container");
     let counter = 0;
     let firstSlider, secondSlider, thirdSlider, allSlider = "";
-    let paramsProductId = getUrlParamsId();
+    let paramsProductId = getUrlParams("id");
     
     products.forEach(product => {  
     

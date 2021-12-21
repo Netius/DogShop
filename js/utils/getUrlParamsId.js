@@ -1,5 +1,5 @@
-export default function getUrlParamsId(){
+export default function getUrlParams(key){
     let params = new URLSearchParams(document.location.search);
-    let id = params.get("id");
-    return id;
+    let value = params.get(key);
+    return value;
 }

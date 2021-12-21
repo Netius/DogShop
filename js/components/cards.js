@@ -2,6 +2,7 @@ import hasProductImage from "../utils/hasProductImage.js";
 
 export default function cardsProducts (products , numberOfCards){
     const cardsContainer = document.getElementById("cards-container");
+    cardsContainer.innerHTML= "";
     let counter = 0;
     numberOfCards = numberOfCards || "show all cards";
 
