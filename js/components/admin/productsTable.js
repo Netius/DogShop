@@ -16,21 +16,20 @@ export function productsTable(products){
 
         table.innerHTML += `
         <tr>
-            <td>${product.id}</td>
-            <td>
-                <img src="${productImageUrl}" class="img-responsive w-100">
+            <td class="d-none d-md-table-cell">
+                <img src="${productImageUrl}" class="w-100">
             </td>
             <td>
                 <a class="link-my-secondary" href="details.html?id=${product.id}" title="Shop ${product.title}">
                     ${product.title}
             </td>
-            <td>${product.description}</td>
+            <td class="d-none d-sm-table-cell">${product.description}</td>
             <td class="text-center">${product.price}</td>
             <td class="text-center">
                 <input type="checkbox" ${featured} disabled class="form-check-input" 
                     id="featuredCheck-${product.id}">
             </td>
-            <td class="text-end">
+            <td>
                 <button data-id=${product.id} type="button" class="btn btn-sm btn-info"
                     data-bs-toggle="collapse" data-bs-target="#edit-product-${product.id}" 
                     aria-expanded="false" aria-controls="editProduct" title="Edit product">
@@ -45,7 +44,7 @@ export function productsTable(products){
         </tr>
         <tr class="collapse" id="edit-product-${product.id}">
             <td colspan="8" class="p-0">
-            <form class="card-body bg-white p-5 m-1 row form-update"  data-id="${product.id}">
+            <form class="card-body bg-white p-md-5 m-1 row form-update"  data-id="${product.id}">
                 <h2 class="h4 mb-3">Edit product</h2>
                 <div class="col-auto mb-3">
                     <label for="input-title-${product.id}" class="form-label">Title</label>

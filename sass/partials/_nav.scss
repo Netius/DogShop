@@ -1,9 +1,36 @@
 .navigation{
     background-color:  getColor("light-brown") !important;
+    &__menu{
+        background-color: getColor("dark-brown");
+    }
     &__logo{
         width: 175px;
     }    
-    
+    &__search{
+        flex: 1;
+        justify-content: flex-end;
+
+        &--icon{
+           align-self: center;
+           margin-left: 5px;
+        }
+        &--button{
+            width: 46px !important;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 3px !important;
+            border-bottom-right-radius: 3px !important;
+        }
+        &--input{
+            max-width: 400px;
+            border: none;
+            background: #fff !important;
+            color: rgba(0, 0, 0, 0.7) !important;
+            font-size: 14px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+    }
     &__cart{
         position: relative;  
         padding-right: 1.5rem;
@@ -13,16 +40,6 @@
             width: 30px;
             line-height: 22px;
         }
-    }
-    &__search{
-        position: relative;
-        flex: 1;
-
-        &--icon{
-           align-self: center;
-           margin-left: 5px;
-        }
-       
     }
     &__admin{
         font-family: "montserrat-semibold", sans-serif ;

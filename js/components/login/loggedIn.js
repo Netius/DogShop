@@ -23,7 +23,8 @@ export default function logggedIn(token){
         loginLink.innerHTML = `
         <a class="nav-link text-reset navigation__admin zoom" title="Logout" 
             href="login.html" id="logout-link" role="link">
-            ${user.username} <i class="fas fa-sign-in-alt fa-lg text-danger"></i>
+            <i class="fas fa-user-plus fa-lg" title="${user.email}"></i>
+            <i class="fas fa-sign-in-alt fa-lg text-danger"></i>
         </a>`
 
         const logoutBtn = document.getElementById("logout-link");

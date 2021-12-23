@@ -3,7 +3,7 @@ import addNewProduct from "./addProduct.js";
 export default function addForm(){
     const form = document.getElementById("add-form");
     form.innerHTML =`
-    <form class="card-body collapse p-5 row" id="form-product">
+    <form class="card-body collapse p-md-5 row" id="form-product">
         <h2 class="h4 mb-3">Add new product</h2>
         <div class="col-auto mb-3">
             <label for="input-title" class="form-label">Title</label>
