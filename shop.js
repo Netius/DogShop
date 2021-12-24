@@ -14,14 +14,14 @@ const token = getToken();
 logggedIn(token);
 
 updateCartTotal();
-// searchForm();
+searchForm();
 // Send api url and container for loading and error message.
-// fetchStrapi(productStrapiUrl, "#cards-message")
-//     .then(products => {
-//        if(products) {
-//         cardsProducts(products);
-//         searchProducts(products)   
-//        }
-//     });
+fetchStrapi(productStrapiUrl, "#cards-message")
+    .then(products => {
+       if(products) {
+        cardsProducts(products);
+        searchProducts(products)   
+       }
+    });
 
 footer();

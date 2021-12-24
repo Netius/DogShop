@@ -23,39 +23,49 @@
 <body>
     <div class="wrapper">
         <header>
-            <nav class="navbar navbar-expand-lg navbar-light navigation pt-5 pb-5">
+            <div class="navigation py-3 py-md-4">
                 <div class="container-xl">
-                    <a class="navbar-brand zoom" href="index.html" title="DogShop | Home">
-                        <img alt="Dogshop-logo" class="navigation__logo me-4" src="../images/dogshop-logo.svg" />
-                    </a>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="navbar-collapse collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav ">
-                            <li class="nav-item zoom">
-                                <a class="nav-link zoom" title="DogShop | Homepage."
-                                    href="index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link zoom active" title="DogShop | Shop all." 
-                                    href="shop.html">Shop all</a>
-                            </li>
-                            <li class="nav-item" id="admin-container"></li>
-                        </ul>
-                        <div id="form-container" class="d-flex navigation__search me-3 ms-3"></div>
-                        <div class="d-flex ms-auto">
+                    <div class="row justify-content-between">
+                        <div class="col">
+                            <a class="navbar-brand" href="index.html" title="DogShop | Home">
+                                <img alt="Dogshop-logo" class="navigation__logo me-4 zoom" src="../images/dogshop-logo.svg" />
+                            </a>
+                        </div>
+                        <div class="col d-flex justify-content-end pe-0">
                             <div class="d-flex align-items-center">
-                                <a class="text-reset navigation__cart zoom" title="See your shopping cart"
-                                    href="cart.html" role="link">
+                                <a class="text-reset navigation__cart zoom me-2" title="See your shopping cart" href="cart.html"
+                                    role="link">
                                     <i class="fas fa-shopping-cart fa-lg"></i>
-                                    <span class="bg-my-secondary position-absolute top-0 start-100 translate-middle badge rounded-pill navigation__cart--total">0</span>
+                                    <span
+                                        class="bg-my-secondary position-absolute top-0 start-100 translate-middle badge rounded-pill navigation__cart--total">0</span>
                                 </a>
                                 <div id="login-container"></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+    
+            <nav class="navbar navbar-expand-lg navbar-dark navigation__menu">
+                <div class="container-xl">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="form-container" class="navigation__search order-lg-last ms-4"></div>
+                  
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                       <ul class="navbar-nav ">
+                            <li class="nav-item zoom">
+                                <a class="nav-link zoom active" title="DogShop | Homepage."
+                                    href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link zoom " title="DogShop | Shop all." 
+                                    href="shop.html">Shop all</a>
+                            </li>
+                            <li class="nav-item" id="admin-container"></li>
+                        </ul>
                     </div>
                 </div>
             </nav>
