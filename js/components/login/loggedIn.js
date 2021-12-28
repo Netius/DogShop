@@ -15,7 +15,7 @@ export default function logggedIn(token){
 
     if(token){
         adminLink.innerHTML=`
-        <a class="nav-link zoom ${activeLink}" title="Administrator page" href="admin.html">
+        <a class="nav-link zoom ${activeLink}" title="DogShop | Admin" href="admin.html">
             Admin
         </a>
         `;
