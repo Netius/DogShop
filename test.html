@@ -74,8 +74,29 @@
             </div>
         </nav>
     </header>
+    <form id="formX">
+        <!-- Can be multiple files -->
+        <input type="file" name="files" />
+        <input type="submit" value="Submit" />
+      </form>
+      
+      <script type="text/javascript">
+        const formElement = document.querySelector('#formX');
+      
+        formElement.addEventListener('submit', (e) => {
+            console.log("ADSADASSDA");
+          e.preventDefault();
+      
+          const request = new XMLHttpRequest();
+      
+          request.open('POST', '/upload');
+      
+          request.send(new FormData(formElement));
+        });
+      </script>
+       
     <!-- <div id="footer-container"></div> -->
-    <script src="/shop.js" type="module"></script>
+    <!-- <script src="/shop.js" type="module"></script> -->
 </body>
 
 </html>
