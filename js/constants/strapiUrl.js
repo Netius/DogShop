@@ -11,4 +11,6 @@ export const productStrapiUrl = "https://safe-retreat-07204.herokuapp.com/produc
 export const strapiUrl = "https://safe-retreat-07204.herokuapp.com";
 export const loginUrl ="https://safe-retreat-07204.herokuapp.com/auth/local";
 export const featuredProductUrl ="https://safe-retreat-07204.herokuapp.com/products?featured=true";
+export const uploadStrapiUrl ="https://safe-retreat-07204.herokuapp.com/upload"; // Upload to Strapi and file is redirect to Cloudinary
+
 
