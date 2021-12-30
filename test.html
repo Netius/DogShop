@@ -84,15 +84,39 @@
         const formElement = document.querySelector('#formX');
       
         formElement.addEventListener('submit', (e) => {
-            console.log("ADSADASSDA");
           e.preventDefault();
       
-          const request = new XMLHttpRequest();
-      
-          request.open('POST', '/upload');
-      
-          request.send(new FormData(formElement));
-        });
+            console.log(formElement.files[0]);
+
+
+            let corsURL = "https://noroffcors.herokuapp.com/"
+
+        // var data = new FormData(formElement);
+        // data.append("", fileInput.files[0], "french.jpg");
+       
+
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjQwNzMxNzUyLCJleHAiOjE2NDMzMjM3NTJ9.Mz4umgB4oYGB7ViQ1cnVetiZk0SqHOXrValaKDvydew");
+
+        var formdata = new FormData(formElement);
+
+        console.log(formdata);
+        // formdata.append("files", formElement, "french.jpg");
+
+        var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: formdata,
+        redirect: 'follow'
+        };
+
+        fetch("https://safe-retreat-07204.herokuapp.com/upload", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+
+
+                });
       </script>
        
     <!-- <div id="footer-container"></div> -->
