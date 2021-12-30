@@ -19,7 +19,7 @@ export default function addForm(){
         </div>
         <div class="mb-3">
             <label class="form-label" for="input-image">Image</label>
-            <input type="file" class="form-control d-block" id="input-image">
+            <input type="file" name="files" class="form-control d-block" id="input-image">
         </div>
         <div class="mb-3">
             <label for="input-description" class="form-label">Description</label>
