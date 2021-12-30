@@ -4,6 +4,7 @@ import { errorMessage } from "../../utils/errorMessage.js";
 import { fetchStrapi } from "../../utils/fetchStrapi.js";
 import { displaySpinner } from "../../utils/spinner.js";
 import { getToken } from "../../utils/storage.js";
+import addImageToProduct from "./addImageToProduct.js";
 import { productsTable } from "./productsTable.js";
 
 
@@ -14,9 +15,8 @@ export default async function updateProduct() {
     const inputPrice = document.querySelector("#input-price-" + productId).value;
     const inputDescription = document.querySelector("#input-description-" + productId).value;
     const inputFeatured = document.querySelector("#input-featured-" + productId).checked;
+    const inputImage = document.querySelector("#input-image-" + productId);
 
-    const inputImage = document.querySelector("#input-image-" + productId).value.split("\\");
-    const fileName = inputImage[inputImage.length - 1];// Gets only the name of image, without the fakepath
 
     if (!confirm(`Update the product '${inputTitle}'?`)) return;
     displaySpinner("#button-update-" + productId);
@@ -45,13 +45,13 @@ export default async function updateProduct() {
         const json = await response.json();
 
         if (response.ok) {
+            await addImageToProduct(inputImage, productId);
+
             alert(`Product '${inputTitle}' is updated.`);
             fetchStrapi(productStrapiUrl, "#admin-message")
                 .then(products => {
                     productsTable(products);
                 })
-
-            //TODO clearform 
         }
     }
     catch (error) {
