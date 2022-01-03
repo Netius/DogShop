@@ -1,0 +1,49 @@
+.cart {
+	background-color: #fff;
+	padding: 4vh 5vh;
+	
+	&__items {
+	}
+
+	&__delete {
+		margin-left: auto;
+		font-size: 0.7rem;
+	}
+}
+
+.summary {
+	padding: 4vh;
+
+	&__tittel {
+		margin-bottom: 2.5rem;
+		font-size: 2rem;
+	}
+
+	&__total {
+		&--price {
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			padding: 2vh 0;
+		}
+	}
+    &__select{
+    	border: 1px solid rgba(0, 0, 0, 0.137);
+        padding: 1.5vh 1vh;
+        margin-bottom: 4vh;
+        outline: none;
+        width: 100%;
+        background-color: rgb(247, 247, 247);
+    }
+    &__discount{
+        border: 1px solid rgba(0, 0, 0, 0.137);
+        padding: 1vh;
+        margin-bottom: 4vh;
+        outline: none;
+        width: 100%;
+        background-color: rgb(247, 247, 247);
+    }
+}
+
+
+// img {
+// 	width: 3.5rem;
+// }

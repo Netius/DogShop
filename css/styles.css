@@ -11622,4 +11622,41 @@ body {
   background-color: antiquewhite;
 }
 
+.cart {
+  background-color: #fff;
+  padding: 4vh 5vh;
+}
+.cart__delete {
+  margin-left: auto;
+  font-size: 0.7rem;
+}
+
+.summary {
+  padding: 4vh;
+}
+.summary__tittel {
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+}
+.summary__total--price {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2vh 0;
+}
+.summary__select {
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  padding: 1.5vh 1vh;
+  margin-bottom: 4vh;
+  outline: none;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.summary__discount {
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  padding: 1vh;
+  margin-bottom: 4vh;
+  outline: none;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
 /*# sourceMappingURL=styles.css.map */
