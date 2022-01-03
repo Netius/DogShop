@@ -1,4 +1,5 @@
-import { deleteFromStorage, getFromStorage, saveToStorage, sumTotalItemsStorage } from "../../utils/storage.js";
+import { deleteFromStorage, getFromStorage, sumTotalItemsStorage } from "../../utils/storage.js";
+import updateCartTotal from "./updateCartTotal.js";
 
 export default function createCart(){
     const cartContainer = document.getElementById("cart-container");
@@ -37,7 +38,10 @@ export default function createCart(){
                 </div>
                 <div class="col">
                     <span>$ ${product.price}</span>
-                    <button  type="button" data-id="${product.id}" class="btn btn-sm btn-outline-danger  cart__delete" title="Remove product from cart.">
+                    <button  type="button" data-id="${product.id}"
+                        data-title="${product.title}"  
+                        class="btn btn-sm btn-outline-danger cart__delete" 
+                        title="Remove product from cart.">
                     <i class="fas fa-trash"></i> 
                     </button>
                 </div>
@@ -54,6 +58,11 @@ export default function createCart(){
 
 function removeProduct(){
     const productId = event.currentTarget.dataset.id;
+    const productTitle = event.currentTarget.dataset.title;
+    if (!confirm(`Remove '${productTitle}' from cart?`)) return;
     deleteFromStorage("products" , productId)
     createCart();
+    updateCartTotal();
+    alert(`'${productTitle}' removed.`);
+
 }
