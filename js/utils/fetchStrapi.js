@@ -1,5 +1,5 @@
 import { clearMessage } from "../utils/clearMessage.js";
-import { errorMessage } from "../utils/errorMessage.js";
+import { errorMessage } from "./displayMessage.js";
 import { displayBigSpinner } from "../utils/spinner.js";
 
 

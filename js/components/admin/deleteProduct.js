@@ -1,6 +1,6 @@
 import { productStrapiUrl } from "../../constants/strapiUrl.js";
 import { clearMessage } from "../../utils/clearMessage.js";
-import { errorMessage } from "../../utils/errorMessage.js";
+import { errorMessage } from "../../utils/displayMessage.js";
 import { fetchStrapi } from "../../utils/fetchStrapi.js";
 import { displaySpinner } from "../../utils/spinner.js";
 import { getToken } from "../../utils/storage.js";

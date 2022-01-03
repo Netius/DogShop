@@ -1,6 +1,6 @@
 import { uploadStrapiUrl } from "../../constants/strapiUrl.js";
 import { getToken } from "../../utils/storage.js";
-import { errorMessage } from "../../utils/errorMessage.js";
+import { errorMessage } from "../../utils/displayMessage.js";
 
 export default async function addImageToProduct(formFile, productId){
     if(formFile.files.length === 0 ) return;
