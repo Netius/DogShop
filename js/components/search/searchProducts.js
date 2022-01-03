@@ -1,5 +1,5 @@
 import { clearMessage } from "../../utils/clearMessage.js";
-import { errorMessage } from "../../utils/errorMessage.js";
+import { errorMessage } from "../../utils/displayMessage.js";
 import cardsProducts from "../cards.js";
 import getUrlParams from "../../utils/getUrlParams.js";
 

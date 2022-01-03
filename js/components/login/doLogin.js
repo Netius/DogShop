@@ -1,5 +1,5 @@
 import { loginUrl } from "../../constants/strapiUrl.js";
-import { errorMessage } from "../../utils/errorMessage.js";
+import { errorMessage } from "../../utils/displayMessage.js";
 import { cleanSpinner, displaySpinner } from "../../utils/spinner.js";
 import { saveToken, saveUser } from "../../utils/storage.js";
 

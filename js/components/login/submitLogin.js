@@ -1,4 +1,4 @@
-import { errorMessage } from "../../utils/errorMessage.js";
+import { errorMessage } from "../../utils/displayMessage.js";
 import doLogin from "./doLogin.js";
 
 export function submitLogin (event){
