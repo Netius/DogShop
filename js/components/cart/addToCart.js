@@ -3,6 +3,10 @@ import updateCartTotal from "./updateCartTotal.js";
 
 export default function addToCart(e){
     const productId = e.currentTarget.dataset.id;
+    const productPrice = e.currentTarget.dataset.price;
+    const productTitle = e.currentTarget.dataset.title;
+    const productImage = e.currentTarget.dataset.image;
+
     let storageArray = getFromStorage("products");
     let quantityProduct = 1;
 
@@ -17,7 +21,11 @@ export default function addToCart(e){
             });
 
     } else{
-        storageArray.push({id: productId, quantity: quantityProduct });
+        storageArray.push({id: productId, 
+                            quantity: quantityProduct,
+                            price: productPrice,
+                            title: productTitle,
+                            image: productImage });
     }
 
     saveToStorage('products' , storageArray);
