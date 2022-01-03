@@ -8,11 +8,13 @@ import cardsProducts from "./js/components/cards.js";
 import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 import { searchProducts } from "./js/components/search/searchProducts.js";
 import searchForm from "./js/components/search/searchForm.js";
+import createLocalStorageArray from "./js/utils/createStorageArray.js";
 
 // Shows login user at nav
 const token = getToken();
 logggedIn(token);
 
+createLocalStorageArray();
 updateCartTotal();
 searchForm();
 // Send api url and container for loading and error message.

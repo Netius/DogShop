@@ -4,20 +4,17 @@ import footer from "./js/components/footer.js";
 import cardsProducts from "./js/components/cards.js";
 import { featuredProductUrl, heroStrapiUrl } from "./js/constants/strapiUrl.js";
 import { fetchStrapi } from "./js/utils/fetchStrapi.js";
-import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
+import { getToken } from "./js/utils/storage.js";
 import logggedIn from "./js/components/login/loggedIn.js";
 import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 import searchForm from "./js/components/search/searchForm.js";
+import createLocalStorageArray from "./js/utils/createStorageArray.js";
 
 // Shows login user at nav
 const token = getToken();
 logggedIn(token);
 
-// Saves empty products array in local storage
-if(!getFromStorage("products")){
-    saveToStorage("products", []);
-}
-
+createLocalStorageArray();
 updateCartTotal();
 searchForm();
 

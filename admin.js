@@ -3,11 +3,12 @@ import footer from "./js/components/footer.js";
 import { productStrapiUrl } from "./js/constants/strapiUrl.js";
 import { fetchStrapi } from "./js/utils/fetchStrapi.js";
 import logggedIn from "./js/components/login/loggedIn.js";
-import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
+import { getToken} from "./js/utils/storage.js";
 import { productsTable } from "./js/components/admin/productsTable.js";
 import addForm from "./js/components/admin/addForm.js";
 import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 import searchForm from "./js/components/search/searchForm.js";
+import createLocalStorageArray from "./js/utils/createStorageArray.js";
 
 const token = getToken();
 
@@ -22,11 +23,7 @@ if (!token) {
       productsTable(products);
     })
 
-  // Saves empty products array in local storage
-  if (!getFromStorage("products")) {
-    saveToStorage("products", []);
-  }
-
+  createLocalStorageArray();
   updateCartTotal();
   searchForm();
 

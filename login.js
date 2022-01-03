@@ -4,7 +4,8 @@ import footer from "./js/components/footer.js";
 import logggedIn from "./js/components/login/loggedIn.js";
 import { submitLogin } from "./js/components/login/submitLogin.js";
 import searchForm from "./js/components/search/searchForm.js";
-import { getToken, getFromStorage, saveToStorage } from "./js/utils/storage.js";
+import createLocalStorageArray from "./js/utils/createStorageArray.js";
+import { getToken } from "./js/utils/storage.js";
 
 const token = getToken();
 if(token){
@@ -12,10 +13,7 @@ if(token){
 }
 logggedIn(token);
 
-// Saves empty products array in local storage
-if(!getFromStorage("products")){
-    saveToStorage("products", []);
-  }
+createLocalStorageArray();
 updateCartTotal();
 searchForm();
 
