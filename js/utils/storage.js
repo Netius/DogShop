@@ -36,3 +36,14 @@ export function getFromStorage(key) {
 
     return value;
 }
+
+export function sumTotalItemsStorage(object, key) {
+    return object.reduce((a, b) => a + (b[key] || 0), 0);
+}
+
+export function deleteFromStorage(key , value){
+    const storageArray = getFromStorage(key);
+    let filteredStorage = storageArray.filter(product => product.id !== value );
+    saveToStorage(key, filteredStorage);
+    
+}
