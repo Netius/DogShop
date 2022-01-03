@@ -11627,8 +11627,12 @@ body {
   padding: 4vh 5vh;
 }
 .cart__delete {
-  margin-left: auto;
+  margin-left: auto !important;
   font-size: 0.7rem;
+  float: right;
+}
+.cart__image {
+  width: 3.5rem;
 }
 
 .summary {

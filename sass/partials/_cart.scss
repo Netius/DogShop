@@ -6,9 +6,13 @@
 	}
 
 	&__delete {
-		margin-left: auto;
+		margin-left: auto !important;
 		font-size: 0.7rem;
+        float: right;
 	}
+    &__image{
+	    width: 3.5rem;
+    }
 }
 
 .summary {
@@ -42,8 +46,3 @@
         background-color: rgb(247, 247, 247);
     }
 }
-
-
-// img {
-// 	width: 3.5rem;
-// }

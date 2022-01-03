@@ -5,6 +5,7 @@ import logggedIn from "./js/components/login/loggedIn.js";
 import updateCartTotal from "./js/components/cart/updateCartTotal.js";
 import searchForm from "./js/components/search/searchForm.js";
 import createLocalStorageArray from "./js/utils/createStorageArray.js";
+import createCart from "./js/components/cart/createCart.js";
 
 // Shows login user at nav
 const token = getToken();
@@ -14,4 +15,5 @@ createLocalStorageArray();
 updateCartTotal();
 searchForm();
 
+createCart();
 footer();
