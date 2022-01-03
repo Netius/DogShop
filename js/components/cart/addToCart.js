@@ -1,3 +1,4 @@
+import { toastMessage } from "../../utils/displayMessage.js";
 import { getFromStorage, saveToStorage } from "../../utils/storage.js";
 import updateCartTotal from "./updateCartTotal.js";
 
@@ -30,4 +31,6 @@ export default function addToCart(e){
 
     saveToStorage('products' , storageArray);
     updateCartTotal();
+    // TODO wip toast
+    // toastMessage()
 }
