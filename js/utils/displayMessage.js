@@ -9,10 +9,11 @@ export function errorMessage(target, message , cssClass){
 }
 
 export function toastMessage(target, message , cssClass){
-    const toastTarget = document.querySelector(target);
+    const toastContainer = document.querySelector(target);
 
-    return toastTarget.innerHTML = `
-    <div class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    toastContainer.innerHTML = `
+    <div class="toast-container position-absolute end-0 p-3">
+    <div class="toast hide align-items-center text-white ${cssClass} border-0" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
                 ${message}
@@ -20,5 +21,19 @@ export function toastMessage(target, message , cssClass){
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
+    </div>
     `
+
+    var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+    let option = {
+        delay: 2500,
+    }
+
+    var toastList = toastElList.map(function(toastEl) {
+          return new bootstrap.Toast(toastEl, option)
+        })
+ 
+    toastList.forEach(toast => toast.show());
+
+    return toastContainer;
 }

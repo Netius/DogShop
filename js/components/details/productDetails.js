@@ -1,3 +1,4 @@
+import { toastMessage } from "../../utils/displayMessage.js";
 import hasProductImage from "../../utils/hasProductImage.js";
 import addToCart from "../cart/addToCart.js";
 
@@ -15,7 +16,7 @@ export default function productDetails(product){
                         <h2 class="display-6 mt-3">${product.title}</h2>
                         <p>${product.description}</p>
                         <p class="mt-5 mb-3 h3">$${product.price}</p>
-                        <button id="cart-button" class="zoom-button btn btn-my-primary mr-1" data-toggle="tooltip" 
+                        <button class="add-cart zoom-button btn btn-my-primary mr-1" data-toggle="tooltip" 
                             title="Add to cart" 
                             data-image="${productImageUrl}"
                             data-price="${product.price}"
@@ -23,8 +24,13 @@ export default function productDetails(product){
                             data-id="${product.id}">
                             <i class="fa fa-shopping-cart"></i>
                         </button>
-                        <button class="ms-1 zoom-button fs-6 btn btn-my-info btn-feature" 
-                                    title="Buy now" href="shop.html" role="button">
+                        <button id="buynow-btn" class="add-cart ms-1 zoom-button fs-6 btn btn-my-info btn-feature" 
+                                    title="Buy now" role="button
+                                    data-image="${productImageUrl}"
+                                    data-price="${product.price}"
+                                    data-title="${product.title}"
+                                    data-id="${product.id}"
+                                    ">
                                     Buy now
                         </button>
                         <h3 class="mt-5">Features</h3>
@@ -37,8 +43,8 @@ export default function productDetails(product){
                 </div>
     `
 
-    const cartBtn = document.getElementById("cart-button");
-    cartBtn.addEventListener("click" , addToCart);
-
+    const cartBtn = document.querySelectorAll(".add-cart");
+    cartBtn.forEach(button => button.addEventListener("click" , addToCart));
+    
     return detailsContainer;
 }
