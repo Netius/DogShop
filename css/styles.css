@@ -11576,6 +11576,10 @@ body {
   z-index: 1000;
 }
 
+.quantity-btn {
+  font-size: 8px !important;
+}
+
 .toast-container {
   top: 15%;
 }
@@ -11628,7 +11632,6 @@ body {
 
 .cart {
   background-color: #fff;
-  padding: 4vh 5vh;
 }
 .cart__delete {
   margin-left: auto !important;
@@ -11639,9 +11642,6 @@ body {
   width: 3.5rem;
 }
 
-.summary {
-  padding: 4vh;
-}
 .summary__tittel {
   margin-bottom: 2.5rem;
   font-size: 2rem;

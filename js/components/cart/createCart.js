@@ -25,9 +25,11 @@ export default function createCart(){
     products.forEach(product => {
         cartContainer.innerHTML += `
             <div class="row align-items-center border-bottom p-2">
-                <div class="col-2">
+                
+                <div class="col-2 d-none d-sm-block">
                     <img title="${product.title}" alt="${product.title}" class="img-fluid cart__image" src="${product.image}">
                 </div>
+                
                 <div class="col">
                     <div class="row">
                         <a class="link-my-secondary" href="details.html?id=${product.id}" title="Shop ${product.title}">
@@ -37,23 +39,23 @@ export default function createCart(){
                 </div>
     
                 <div class="col">
-                    <button class="quantity-btn" 
-                            data-nummer="-1" 
-                            data-id="${product.id}" 
-                            data-title="${product.title}" 
-                            data-price="${product.price}" 
-                            data-quantity="${product.quantity}">-</button>
+                    <button title="Remove 1 product" class="btn btn-my-primary btn-sm rounded-circle quantity-btn"
+                        data-nummer="-1" 
+                        data-id="${product.id}"
+                        data-title="${product.title}">
+                        <i class="fas fa-minus fa-sm"></i>
+                    </button>    
                     <span class="m-2 text-muted" >${product.quantity}</span>
-                    <button class="quantity-btn" 
-                            data-nummer="1" 
-                            data-id="${product.id}" 
-                            data-title="${product.title}"
-                            data-price="${product.price}"
-                            data-quantity="${product.quantity}">+</button>
+                    <button title="Add 1 product" class="btn btn-my-primary btn-sm rounded-circle quantity-btn"
+                        data-nummer="1" 
+                        data-id="${product.id}"
+                        data-title="${product.title}">
+                        <i class="fas fa-plus fa-sm"></i>
+                    </button>
                 </div>
 
-                <div class="col">
-                    <span>$ ${product.total}</span>
+                <div class="col-3">
+                    <span>$${product.total}</span>
                     <button  type="button" data-id="${product.id}"
                         data-title="${product.title}"  
                         class="btn btn-sm btn-outline-danger cart__delete" 
@@ -90,11 +92,10 @@ function removeProduct(){
 
 function addRemoveQuantity(){
     const productId = event.currentTarget.dataset.id;
-    const productQuantity = Number(event.currentTarget.dataset.quantity);
-    const productTitle = event.currentTarget.dataset.title;
     const productNummer = Number(event.currentTarget.dataset.nummer);
-    const productPrice = Number(event.currentTarget.dataset.price);
+    const productTitle = Number(event.currentTarget.dataset.title);
 
+    console.log(productNummer)
     let zeroQuantity = 0;
 
     let storageArray = getFromStorage("products");
@@ -102,12 +103,11 @@ function addRemoveQuantity(){
             if(product.id === productId){
                 // USing productNummer to check if pressed pluss or minus
                 if(productNummer > 0){
-                    product.total += productPrice;  
+                    product.total += product.price;  
                     product.quantity += 1;
                     zeroQuantity = product.quantity;  
                 } else{
-                    console.log("minus")
-                    product.total -= productPrice;  
+                    product.total -= product.price;  
                     product.quantity -= 1;
                     zeroQuantity = product.quantity;  
                 }
@@ -123,5 +123,5 @@ function addRemoveQuantity(){
     updateCartTotal();
     createCart();
     createSummaryCart();
-    
+
 }
