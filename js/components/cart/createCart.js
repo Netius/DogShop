@@ -1,5 +1,6 @@
-import { deleteFromStorage, getFromStorage, saveToStorage, sumTotalItemsStorage } from "../../utils/storage.js";
+import { getFromStorage, saveToStorage, sumTotalItemsStorage } from "../../utils/storage.js";
 import createSummaryCart from "./createSummaryCart.js";
+import removeProduct from "./removeFromCart.js";
 import updateCartTotal from "./updateCartTotal.js";
 
 export default function createCart(){
@@ -55,7 +56,7 @@ export default function createCart(){
                 </div>
 
                 <div class="col-3">
-                    <span>$${product.total}</span>
+                    <span>$ ${product.total}</span>
                     <button  type="button" data-id="${product.id}"
                         data-title="${product.title}"  
                         class="btn btn-sm btn-outline-danger cart__delete" 
@@ -75,21 +76,7 @@ export default function createCart(){
 
     return cartContainer;
 }
-
-// TODO need to moved this to cart folder
-function removeProduct(){
-    const productId = event.currentTarget.dataset.id;
-    const productTitle = event.currentTarget.dataset.title;
-    if (!confirm(`Remove '${productTitle}' from cart?`)) return;
-    deleteFromStorage("products" , productId)
-    createCart();
-    createSummaryCart();
-    updateCartTotal();
-    alert(`'${productTitle}' removed.`);
-
-}
-
-
+// TODO need to move this on own folder
 function addRemoveQuantity(){
     const productId = event.currentTarget.dataset.id;
     const productNummer = Number(event.currentTarget.dataset.nummer);
