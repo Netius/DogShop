@@ -1,4 +1,4 @@
-import { deleteFromStorage, getFromStorage, sumTotalItemsStorage } from "../../utils/storage.js";
+import { deleteFromStorage, getFromStorage, saveToStorage, sumTotalItemsStorage } from "../../utils/storage.js";
 import createSummaryCart from "./createSummaryCart.js";
 import updateCartTotal from "./updateCartTotal.js";
 
@@ -37,8 +37,21 @@ export default function createCart(){
                 </div>
     
                 <div class="col">
+                    <button class="quantity-btn" 
+                            data-nummer="-1" 
+                            data-id="${product.id}" 
+                            data-title="${product.title}" 
+                            data-price="${product.price}" 
+                            data-quantity="${product.quantity}">-</button>
                     <span class="m-2 text-muted" >${product.quantity}</span>
+                    <button class="quantity-btn" 
+                            data-nummer="1" 
+                            data-id="${product.id}" 
+                            data-title="${product.title}"
+                            data-price="${product.price}"
+                            data-quantity="${product.quantity}">+</button>
                 </div>
+
                 <div class="col">
                     <span>$ ${product.total}</span>
                     <button  type="button" data-id="${product.id}"
@@ -53,7 +66,10 @@ export default function createCart(){
     });
 
     const deleteBtn = document.querySelectorAll(".cart__delete");
-    deleteBtn.forEach(button => button.addEventListener("click" , removeProduct))
+    deleteBtn.forEach(button => button.addEventListener("click" , removeProduct));
+
+    const quantityBtn = document.querySelectorAll(".quantity-btn");
+    quantityBtn.forEach(button => button.addEventListener("click" , addRemoveQuantity));
 
     return cartContainer;
 }
@@ -69,4 +85,43 @@ function removeProduct(){
     updateCartTotal();
     alert(`'${productTitle}' removed.`);
 
+}
+
+
+function addRemoveQuantity(){
+    const productId = event.currentTarget.dataset.id;
+    const productQuantity = Number(event.currentTarget.dataset.quantity);
+    const productTitle = event.currentTarget.dataset.title;
+    const productNummer = Number(event.currentTarget.dataset.nummer);
+    const productPrice = Number(event.currentTarget.dataset.price);
+
+    let zeroQuantity = 0;
+
+    let storageArray = getFromStorage("products");
+        storageArray.map(product => {
+            if(product.id === productId){
+                // USing productNummer to check if pressed pluss or minus
+                if(productNummer > 0){
+                    product.total += productPrice;  
+                    product.quantity += 1;
+                    zeroQuantity = product.quantity;  
+                } else{
+                    console.log("minus")
+                    product.total -= productPrice;  
+                    product.quantity -= 1;
+                    zeroQuantity = product.quantity;  
+                }
+                return 
+             }
+             return product;
+            });
+        
+    //Remove product from cart if is last one  
+    if(zeroQuantity < 1) return removeProduct();        
+
+    saveToStorage('products' , storageArray);
+    updateCartTotal();
+    createCart();
+    createSummaryCart();
+    
 }

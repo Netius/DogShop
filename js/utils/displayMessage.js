@@ -12,7 +12,7 @@ export function toastMessage(target, message , cssClass){
     const toastContainer = document.querySelector(target);
 
     toastContainer.innerHTML = `
-    <div class="toast-container position-absolute end-0 p-3">
+    <div class="toast-container position-fixed end-0 p-3">
     <div class="toast hide align-items-center text-white ${cssClass} border-0" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
