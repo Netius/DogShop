@@ -29,14 +29,18 @@ export default function createCart(){
                     <img title="${product.title}" alt="${product.title}" class="img-fluid cart__image" src="${product.image}">
                 </div>
                 <div class="col">
-                    <div class="row">${product.title}</div>
+                    <div class="row">
+                        <a class="link-my-secondary" href="details.html?id=${product.id}" title="Shop ${product.title}">
+                            ${product.title}
+                        </a>
+                    </div>
                 </div>
     
                 <div class="col">
                     <span class="m-2 text-muted" >${product.quantity}</span>
                 </div>
                 <div class="col">
-                    <span>$ ${product.price}</span>
+                    <span>$ ${product.total}</span>
                     <button  type="button" data-id="${product.id}"
                         data-title="${product.title}"  
                         class="btn btn-sm btn-outline-danger cart__delete" 

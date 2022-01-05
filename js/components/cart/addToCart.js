@@ -16,7 +16,9 @@ export default function addToCart(e){
     if(isInStorage){
         storageArray.map(product => {
             if(product.id === productId){
-                return product.quantity += quantityProduct;
+                product.total += Number(productPrice);  
+                product.quantity += quantityProduct;
+                return 
              }
              return product;
             });
@@ -25,6 +27,7 @@ export default function addToCart(e){
         storageArray.push({id: productId, 
                             quantity: Number(quantityProduct),
                             price: Number(productPrice),
+                            total:  Number(productPrice), 
                             title: productTitle,
                             image: productImage });
     }

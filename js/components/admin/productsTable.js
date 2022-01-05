@@ -22,6 +22,7 @@ export function productsTable(products){
             <td>
                 <a class="link-my-secondary" href="details.html?id=${product.id}" title="Shop ${product.title}">
                     ${product.title}
+                </a>
             </td>
             <td class="d-none d-sm-table-cell">${product.description}</td>
             <td class="text-center">${product.price}</td>

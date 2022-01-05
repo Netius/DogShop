@@ -9,9 +9,9 @@ export default function createSummaryCart(){
     const products = getFromStorage("products");
 
     if(products.length > 0) {
-        const totalPrice = sumTotalItemsStorage(products , "price");
+        const totalPrice = sumTotalItemsStorage(products , "total");
         totalPriceContainer.innerHTML = `$ ${totalPrice}`;
-        // TODO totalprice x quantity
+      
     } else{
         summaryContainer.innerHTML = `
             <div class="row">
@@ -26,7 +26,7 @@ export default function createSummaryCart(){
         summaryContainer.innerHTML +=`
         <div class="row mb-2">
             <div class="col">${product.title}</div>
-            <div class="col text-right">$ ${product.price}</div>
+            <div class="col text-right">$ ${product.total}</div>
         </div>
         `
     });
