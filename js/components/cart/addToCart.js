@@ -23,8 +23,8 @@ export default function addToCart(e){
 
     } else{
         storageArray.push({id: productId, 
-                            quantity: quantityProduct,
-                            price: productPrice,
+                            quantity: Number(quantityProduct),
+                            price: Number(productPrice),
                             title: productTitle,
                             image: productImage });
     }

@@ -25,7 +25,7 @@ export default function productDetails(product){
                             <i class="fa fa-shopping-cart"></i>
                         </button>
                         <button id="buynow-btn" class="add-cart ms-1 zoom-button fs-6 btn btn-my-info btn-feature" 
-                                    title="Buy now" role="button
+                                    title="Buy now"
                                     data-image="${productImageUrl}"
                                     data-price="${product.price}"
                                     data-title="${product.title}"

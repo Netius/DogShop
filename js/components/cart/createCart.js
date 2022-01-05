@@ -1,4 +1,5 @@
 import { deleteFromStorage, getFromStorage, sumTotalItemsStorage } from "../../utils/storage.js";
+import createSummaryCart from "./createSummaryCart.js";
 import updateCartTotal from "./updateCartTotal.js";
 
 export default function createCart(){
@@ -11,9 +12,8 @@ export default function createCart(){
     
     if(products.length > 0) {
         const totalStorage = sumTotalItemsStorage(products , "quantity")
-        cartTotal.innerHTML = `${totalStorage} products in cart.`
+        cartTotal.innerHTML = `${totalStorage} products in cart.`;
     } else{
-        cartTotal.innerHTML = "";
         cartContainer.innerHTML = `
             <div class="alert alert-info">
                 Your shopping cart is empty.
@@ -21,7 +21,6 @@ export default function createCart(){
         `;
         return;
     }
-
 
     products.forEach(product => {
         cartContainer.innerHTML += `
@@ -55,13 +54,14 @@ export default function createCart(){
     return cartContainer;
 }
 
-
+// TODO need to moved this to cart folder
 function removeProduct(){
     const productId = event.currentTarget.dataset.id;
     const productTitle = event.currentTarget.dataset.title;
     if (!confirm(`Remove '${productTitle}' from cart?`)) return;
     deleteFromStorage("products" , productId)
     createCart();
+    createSummaryCart();
     updateCartTotal();
     alert(`'${productTitle}' removed.`);
 
