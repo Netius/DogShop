@@ -11,8 +11,6 @@ export default async function deleteProduct() {
     const productId = event.currentTarget.dataset.id;
     const inputTitle = document.querySelector("#input-title-" + productId).value;
 
-    // if (!confirm(`Delete product '${inputTitle}'?`)) return;
-
     modalMessage(`Delete product '${inputTitle}'?`);
 
     modalConfirm(async function (confirm) {

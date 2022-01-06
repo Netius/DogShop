@@ -23,46 +23,46 @@ export default async function updateProduct() {
 
     modalConfirm(async function (confirm) {
         if (confirm) {
-    displaySpinner("#button-update-" + productId);
-    
-    const token = getToken();
+            displaySpinner("#button-update-" + productId);
 
-    const data = JSON.stringify({
-        title: inputTitle,
-        price: inputPrice,
-        description: inputDescription,
-        featured: inputFeatured,
-        published_at: new Date()
-    })
+            const token = getToken();
 
-    const options = {
-        method: "PUT",
-        body: data,
-        headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`
-        },
-    };
+            const data = JSON.stringify({
+                title: inputTitle,
+                price: inputPrice,
+                description: inputDescription,
+                featured: inputFeatured,
+                published_at: new Date()
+            })
 
-    try {
-        const response = await fetch(`${productStrapiUrl}${productId}`, options);
-        const json = await response.json();
+            const options = {
+                method: "PUT",
+                body: data,
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`
+                },
+            };
 
-        if (response.ok) {
-            await addImageToProduct(inputImage, productId);
-            toastMessage("#toast-container", `Product '${inputTitle}' is updated.`, "bg-my-secondary");
-            fetchStrapi(productStrapiUrl, "#admin-message")
-                .then(products => {
-                    productsTable(products);
-                })
-        }
-    }
-    catch (error) {
-        console.log(error);
-        errorMessage(`#message-update-${productId}`, error, "alert-danger");
+            try {
+                const response = await fetch(`${productStrapiUrl}${productId}`, options);
+                const json = await response.json();
 
-    }
-    clearMessage(`#button-update-${productId}`);
+                if (response.ok) {
+                    await addImageToProduct(inputImage, productId);
+                    toastMessage("#toast-container", `Product '${inputTitle}' is updated.`, "bg-my-secondary");
+                    fetchStrapi(productStrapiUrl, "#admin-message")
+                        .then(products => {
+                            productsTable(products);
+                        })
+                }
+            }
+            catch (error) {
+                console.log(error);
+                errorMessage(`#message-update-${productId}`, error, "alert-danger");
+
+            }
+            clearMessage(`#button-update-${productId}`);
         }
     });
 }

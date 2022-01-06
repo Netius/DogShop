@@ -4,9 +4,7 @@ import { cleanSpinner, displaySpinner } from "../../utils/spinner.js";
 import { saveToken, saveUser } from "../../utils/storage.js";
 
 export default async function doLogin(username, password){
-
     displaySpinner(".login-spinner");
-    // console.log(spinnerContainer)
 
     const data = JSON.stringify({identifier: username, password: password });
     const options = {

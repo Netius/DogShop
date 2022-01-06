@@ -1,4 +1,3 @@
-import { toastMessage } from "../../utils/displayMessage.js";
 import hasProductImage from "../../utils/hasProductImage.js";
 import addToCart from "../cart/addToCart.js";
 

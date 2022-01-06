@@ -1,6 +1,7 @@
 import modalMessage, { modalConfirm } from "../../utils/modalMessages.js";
 
 export default function doLogout(){
+    event.preventDefault();
     modalMessage(`Do you want to log out?`);
     
     modalConfirm(function (confirm) {
@@ -10,13 +11,4 @@ export default function doLogout(){
             location.href ="/login.html";
         }
     });
-
-    event.preventDefault();
-
-
-    // if(!confirm("Do you want to log out?")){
-    //     return;
-    // } 
-
-     
 }
