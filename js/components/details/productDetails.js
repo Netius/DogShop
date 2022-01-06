@@ -22,7 +22,7 @@ export default function productDetails(product){
                             data-price="${product.price}"
                             data-title="${product.title}"
                             data-id="${product.id}">
-                            <i class="fa fa-shopping-cart"></i>
+                            <i class="fa fa-cart-plus fa-lg"></i>
                         </button>
                         <button id="buynow-btn" class="add-cart ms-1 zoom-button fs-6 btn btn-my-info btn-feature" 
                                     title="Buy now"
