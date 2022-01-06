@@ -1,10 +1,22 @@
-export default function doLogout(){
-    if(!confirm("Do you want to log out?")){
-        event.preventDefault();
-        return;
-    } 
+import modalMessage, { modalConfirm } from "../../utils/modalMessages.js";
 
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
-        location.href ="/login.html";   
+export default function doLogout(){
+    modalMessage(`Do you want to log out?`);
+    
+    modalConfirm(function (confirm) {
+        if (confirm) {
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+            location.href ="/login.html";
+        }
+    });
+
+    event.preventDefault();
+
+
+    // if(!confirm("Do you want to log out?")){
+    //     return;
+    // } 
+
+     
 }

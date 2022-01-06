@@ -19,8 +19,6 @@ export default async function updateProduct() {
     const inputFeatured = document.querySelector("#input-featured-" + productId).checked;
     const inputImage = document.querySelector("#input-image-" + productId);
 
-
-    // if (!confirm(`Update the product '${inputTitle}'?`)) return;
     modalMessage(`Update the product '${inputTitle}'?`);
 
     modalConfirm(async function (confirm) {
