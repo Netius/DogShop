@@ -1,11 +1,13 @@
 import { productStrapiUrl } from "../../constants/strapiUrl.js";
 import { clearMessage } from "../../utils/clearMessage.js";
-import { errorMessage } from "../../utils/displayMessage.js";
+import { errorMessage, toastMessage } from "../../utils/displayMessage.js";
 import { fetchStrapi } from "../../utils/fetchStrapi.js";
 import { displaySpinner } from "../../utils/spinner.js";
 import { getToken } from "../../utils/storage.js";
 import addImageToProduct from "./addImageToProduct.js";
 import { productsTable } from "./productsTable.js";
+import modalMessage, { modalConfirm } from "../../utils/modalMessages.js";
+
 
 
 export default async function updateProduct() {
@@ -18,7 +20,11 @@ export default async function updateProduct() {
     const inputImage = document.querySelector("#input-image-" + productId);
 
 
-    if (!confirm(`Update the product '${inputTitle}'?`)) return;
+    // if (!confirm(`Update the product '${inputTitle}'?`)) return;
+    modalMessage(`Update the product '${inputTitle}'?`);
+
+    modalConfirm(async function (confirm) {
+        if (confirm) {
     displaySpinner("#button-update-" + productId);
     
     const token = getToken();
@@ -46,8 +52,7 @@ export default async function updateProduct() {
 
         if (response.ok) {
             await addImageToProduct(inputImage, productId);
-
-            alert(`Product '${inputTitle}' is updated.`);
+            toastMessage("#toast-container", `Product '${inputTitle}' is updated.`, "bg-my-secondary");
             fetchStrapi(productStrapiUrl, "#admin-message")
                 .then(products => {
                     productsTable(products);
@@ -60,5 +65,6 @@ export default async function updateProduct() {
 
     }
     clearMessage(`#button-update-${productId}`);
-
+        }
+    });
 }

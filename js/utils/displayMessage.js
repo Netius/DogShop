@@ -12,14 +12,14 @@ export function toastMessage(target, message , cssClass){
     const toastContainer = document.querySelector(target);
 
     toastContainer.innerHTML = `
-    <div class="toast-container position-fixed end-0 p-3">
+    <div class="toast-container position-fixed end-0 p-3 text-white">
     <div class="toast hide align-items-center ${cssClass} border-0" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
             <img title="DogShop" src="/images/favicon/android-chrome-72x72.png" width="25" class="rounded me-2" alt="Dogshop favicon">
                 ${message}
             </div>
-            <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
         </div>
     </div>
     </div>

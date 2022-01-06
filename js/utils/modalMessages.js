@@ -16,15 +16,16 @@ export default function modalMessage(message){
              ${message}
           </div>
           <div class="modal-footer">
+            <button  id="modal-accept" type="button" title="Ok" 
+                    class=" modal-button btn btn-success">
+              Ok
+            </button>
             <button id="modal-cancel" type="button" title="Cancel"
                     class="btn btn-outline-secondary modal-button" 
                     data-bs-dismiss="modal">
               Cancel
             </button>
-            <button id="modal-accept" type="button" title="Ok" 
-                    class=" modal-button btn btn-success">
-             Ok
-            </button>
+           
           </div>
         </div>
       </div>

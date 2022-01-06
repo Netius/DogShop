@@ -17,7 +17,7 @@ export default function removeProduct(){
             createCart();
             createSummaryCart();
             updateCartTotal();
-            toastMessage("#toast-container", `'${productTitle}' removed.` , "bg-light")
+            toastMessage("#toast-container", `'${productTitle}' removed.` , "bg-my-secondary")
         } 
     });
 }

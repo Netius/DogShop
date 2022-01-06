@@ -31,7 +31,7 @@ export default async function deleteProduct() {
             try {
                 const response = await fetch(`${productStrapiUrl}${productId}`, options);
                 if (response.ok) {
-                    toastMessage("#toast-container", `Product '${inputTitle}' is deleted.`, "bg-light");
+                    toastMessage("#toast-container", `Product '${inputTitle}' is deleted.`, "bg-my-secondary");
                     fetchStrapi(productStrapiUrl, "#admin-message")
                         .then(products => {
                             productsTable(products);

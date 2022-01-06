@@ -11584,6 +11584,14 @@ body {
   top: 15%;
 }
 
+.toast {
+  width: auto !important;
+}
+
+.toast-body {
+  font-size: 15px;
+}
+
 .carousel-nav-icon {
   height: 48px;
   width: 48px;
