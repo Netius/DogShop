@@ -1,7 +1,6 @@
-import { getFromStorage, saveToStorage, sumTotalItemsStorage } from "../../utils/storage.js";
-import createSummaryCart from "./createSummaryCart.js";
+import { getFromStorage, sumTotalItemsStorage } from "../../utils/storage.js";
+import addRemoveQuantity from "../admin/addRemoveQuantity.js";
 import removeProduct from "./removeFromCart.js";
-import updateCartTotal from "./updateCartTotal.js";
 
 export default function createCart(){
     const cartContainer = document.getElementById("cart-container");
@@ -75,40 +74,4 @@ export default function createCart(){
     quantityBtn.forEach(button => button.addEventListener("click" , addRemoveQuantity));
 
     return cartContainer;
-}
-// TODO need to move this on own folder
-function addRemoveQuantity(){
-    const productId = event.currentTarget.dataset.id;
-    const productNummer = Number(event.currentTarget.dataset.nummer);
-    const productTitle = Number(event.currentTarget.dataset.title);
-
-    console.log(productNummer)
-    let zeroQuantity = 0;
-
-    let storageArray = getFromStorage("products");
-        storageArray.map(product => {
-            if(product.id === productId){
-                // USing productNummer to check if pressed pluss or minus
-                if(productNummer > 0){
-                    product.total += product.price;  
-                    product.quantity += 1;
-                    zeroQuantity = product.quantity;  
-                } else{
-                    product.total -= product.price;  
-                    product.quantity -= 1;
-                    zeroQuantity = product.quantity;  
-                }
-                return 
-             }
-             return product;
-            });
-        
-    //Remove product from cart if is last one  
-    if(zeroQuantity < 1) return removeProduct();        
-
-    saveToStorage('products' , storageArray);
-    updateCartTotal();
-    createCart();
-    createSummaryCart();
-
 }
