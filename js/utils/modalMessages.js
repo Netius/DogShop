@@ -8,7 +8,7 @@ export default function modalMessage(message){
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <img title="DogShop" src="/images/favicon/android-chrome-72x72.png" width="30" class="rounded me-2" alt="Dogshop favicon">
+            <img title="DogShop" src="images/favicon/android-chrome-72x72.png" width="30" class="rounded me-2" alt="Dogshop favicon">
             <h5 class="modal-title" id="exampleModalLabel">DogShop</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>

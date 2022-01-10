@@ -22,7 +22,7 @@ export default async function doLogin(username, password){
         if (json.user) {
             saveToken(json.jwt);
             saveUser(json.user);
-            location.href = "/admin.html"; // Redirects to welcome page
+            location.href = "admin.html"; // Redirects to welcome page
         }else{
             errorMessage("#login-message","Email or password invalid.", "alert-danger" );
             cleanSpinner(".login-spinner"); //Clean spinner if login failed

@@ -1,4 +1,3 @@
-import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import { heroImage } from "./js/components/hero.js";
 import footer from "./js/components/footer.js";
 import cardsProducts from "./js/components/cards.js";
