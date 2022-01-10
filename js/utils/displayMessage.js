@@ -16,7 +16,7 @@ export function toastMessage(target, message , cssClass){
     <div class="toast hide align-items-center ${cssClass} border-0" role="alert" aria-live="assertive" aria-atomic="true">
         <div class="d-flex">
             <div class="toast-body">
-            <img title="DogShop" src="/images/favicon/android-chrome-72x72.png" width="25" class="rounded me-2" alt="Dogshop favicon">
+            <img title="DogShop" src="images/favicon/android-chrome-72x72.png" width="25" class="rounded me-2" alt="Dogshop favicon">
                 ${message}
             </div>
             <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
