@@ -37,7 +37,7 @@ export default function addToCart(e){
 
     // Using id from button to redirect to Cart if is buynow;
     const redirectButton = e.currentTarget.id;
-    if(redirectButton === "buynow-btn") return location.href = "/cart.html";
+    if(redirectButton === "buynow-btn") return location.href = "cart.html";
 
     toastMessage("#toast-container", `'${productTitle}' add to cart.`, "bg-my-secondary");
     

@@ -8,7 +8,7 @@ export default function doLogout(){
         if (confirm) {
             localStorage.removeItem("token");
             localStorage.removeItem("user");
-            location.href ="/login.html";
+            location.href ="login.html";
         }
     });
 }

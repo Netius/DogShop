@@ -13,7 +13,7 @@ const token = getToken();
 
 //If not token saved in storage goes back to login 
 if (!token) {
-  location.href = "/login.html";
+  location.href = "login.html";
 } else {
   logggedIn(token);
   addForm();

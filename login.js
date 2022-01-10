@@ -8,7 +8,7 @@ import { getToken } from "./js/utils/storage.js";
 
 const token = getToken();
 if(token){
-    location.href ="/index.html";
+    location.href ="index.html";
 }
 logggedIn(token);
 
