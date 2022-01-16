@@ -11524,6 +11524,17 @@ body {
   .zoom {
     transform-origin: left bottom;
   }
+
+  .navigation__logo {
+    width: 140px;
+    margin-right: 0 !important;
+  }
+  .navigation__cart {
+    margin-right: 0 !important;
+  }
+  .navigation__admin {
+    letter-spacing: 1px;
+  }
 }
 .hero__container--image {
   min-height: 650px;

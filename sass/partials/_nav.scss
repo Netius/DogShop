@@ -64,4 +64,16 @@
     .zoom{
         transform-origin: left bottom;
     }
+    .navigation{
+        &__logo{
+            width: 140px;
+            margin-right: 0 !important;
+        }
+        &__cart{
+            margin-right: 0 !important;
+        }
+        &__admin{
+            letter-spacing: 1px;
+        }
+    }
 }
