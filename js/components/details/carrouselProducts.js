@@ -22,7 +22,7 @@ export default function carrouselProducts(products){
                         <img src="${productImageUrl}"
                             alt="${product.title}" class="img-fluid w-100 d-block mx-auto mb-3">
                         <h3 class="fs-5 nav-item">
-                            <a href="../details.html?id=${product.id}" title="Shop ${product.title}" class="nav-link text-dark">${product.title}</a>
+                            <a href="details.html?id=${product.id}" title="Shop ${product.title}" class="nav-link text-dark">${product.title}</a>
                         </h3>
                         <p>$${product.price}</p>
                     </div>
