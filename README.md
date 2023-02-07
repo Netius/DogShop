@@ -10,29 +10,29 @@ The site have a good user experience and UI design, following today’s trends a
 
 ### Customer-facing pages
 
-- Home page
+- Home page |
   Banner with an image that is uploaded to Strapi.
   A list of featured products.
 
-- Products page
+- Products page |
   A list of all products added to Strapi.
   A search text box.
 
-- Product details page
+- Product details page |
   This page is reached by a user clicking on a product on the product list page.
 
-- Cart/Basket page
+- Cart/Basket page |
   The cart/basket page display a list of all products added to the cart
 
 ### Admin section
 
-- Login/Logout
+- Login/Logout |
   Login form that allows administrator users to login. Local storage to keep the user logged in.
 
-- Add/edit/remove products
+- Add/edit/remove products |
   Allow admin to added, edit or remove products from Strapi Api.
 
-- Product images
+- Product images |
   Allow admin to added, edit or remove images from Cloudinary.
 
 ## Built With
@@ -72,7 +72,7 @@ https://sass-lang.com/
 You will need to have a Strapi installation running in your PC to full use this project.
 Api structure in Strapi:
 
-- Products (Collection Types)
+- Products (Collection Types) |
   title - Text
   description - Text
   price - Number
@@ -80,7 +80,7 @@ Api structure in Strapi:
   image_url - Text
   featured - Boolean
 
-- Home (Single Type)
+- Home (Single Type) |
   hero_banner - Media
   hero_banner_alt_text - Text
 
