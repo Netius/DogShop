@@ -62,7 +62,12 @@ git clone git@github.com:Netius/DogShop.git
 npm install
 ```
 
-3. Install a Strapi
+3. Install Sass
+
+You need to install sass, run and watch the file \sass\styles.scss
+https://sass-lang.com/
+
+4. Install a Strapi
 
 You will need to have a Strapi installation running in your PC to full use this project.
 Api structure in Strapi:
@@ -84,7 +89,7 @@ Api structure in Strapi:
 
 To use in development with Strapi deployed locally change the file - js/constants/strapiUrl.js
 
-4. Cloudinary (optional)
+5. Cloudinary (optional)
    With you want to keep your images in a third party CMS check out this link:
    https://strapi.io/blog/add-cloudinary-support-to-your-strapi-application
 
